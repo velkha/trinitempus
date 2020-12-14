@@ -1,0 +1,87 @@
+USUARIO
+uid: 123
+nombre
+password
+mail
+ciudad
+telefono
+about_me
+datos_contacto
+saldo
+foto:
+nivel_de_usuario 0-Usuario no valido, 1-Usuario Valido, Usuario Admin-2
+
+SERVICIOS
+id: 
+uid_owner:
+Nombre:
+Categoria: solo 1
+Subcategoria: solo 1
+Duracion:
+Descripcion:
+Ciudad:
+Precio:
+foto_principal:
+id_contenidos_multimedia:
+rangofechas: AAAAMMDD-AAAAMMDD; <- Rango de fechas en el sentido de x dia a y dia ó dia x, a, j, f, y...
+public: boolean
+denuncias: int 
+n_usos: 
+puntucion:
+comentarios_servicio:4;1;3
+
+
+Pedidos:
+id:
+id_servicio:
+id_usuario_cliente:
+contenido_multimedia_pedido:
+comentarios_pedido: 1;2;3;4;5;6;7;8
+estado: -1 - Rechazado, 0-En espera, 1-Aceptado, 2-Cerrado
+
+
+Categoria:
+id:
+nombre:
+descripcion:
+
+Subcategoria:
+id:
+id_categoria_padre:
+nombre:
+descripcion:
+
+Comentarios:
+id:
+tipo_comentario: 1- Comentario perfil, 2-Comentario de cm, 3- Comentario de servicio
+id_padre:
+id_usuario:
+texto: 	
+privado: boolean;
+
+Mensaje:
+id:
+id_emisor:
+id_receptor:
+mensaje:
+id_contenidos_multimedia: 21;34;54;12
+estado: 0-No enviado, 1-Enviado, 2-Leido, 3-Borrado
+
+Contenido_multimedia:
+id:
+uid_owner:
+contenido: imagen.png || video.mp4
+
+Ciudad:
+id:
+nombre:
+latitud:
+longitud:
+
+
+
+
+
+
+
+
