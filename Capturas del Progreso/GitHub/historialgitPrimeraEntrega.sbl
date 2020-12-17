@@ -1,0 +1,272 @@
+    1  git init
+    2  git branch -d master
+    3  git checkout master
+    4  rm -rf .git
+    5  pwd
+    6  cd /
+    7  pwd
+    8  cd d
+    9  pwd
+   10  ls
+   11  cd Estudios/Modulo/Apuntes/Programacion/Codigo/Repositorios\ Github/Java/Angel_Interfaces
+   12  cd Estudios/
+   13  cd Modulo
+   14  cd Apuntes/
+   15  cd Programacion
+   16  cd Codigo/
+   17  ls
+   18  cd Repositorios github
+   19  cd Repositorios\ Github/
+   20  cd Java/
+   21  cd Angel_Interfaces
+   22  ls
+   23  cd Angel_InterfacesBolas/
+   24  git init
+   25  git add .
+   26  git status
+   27  git commit test
+   28  git commit . test
+   29  git commit -a
+   30  git config --global user.name velkha
+   31  git commit -a
+   32  git config --global user.email velkapb99@gmail.com
+   33  git status
+   34  git commit -a
+   35  git remote add origin ttps://github.com/velkha/Angel_InterfacesBolas.git
+   36  ;
+   37  git status
+   38  git remote add origin ttps://github.com/velkha/Angel_InterfacesBolas.git
+   39  git commit -a
+   40  git commit -a -m test
+   41  git status
+   42  git push -u origin master
+   43  hit push --help
+   44  git push --help
+   45  git push origin
+   46  git push --set-upstream origin master
+   47  git remote add origin https://github.com/velkha/Angel_InterfacesBolas.git
+   48  git remote rm origin
+   49  git remote add origin https://github.com/velkha/Angel_InterfacesBolas.git
+   50  git push --set-upstream origin master
+   51  git pull
+   52  git statu
+   53  git status
+   54  git commit .
+   55  git add .
+   56  git status
+   57  pwd
+   58  cd d
+   59  cd /d
+   60  cd Estudios/
+   61  cd Modulo/Apuntes/Programacion/Codigo/Repositorios\ Github/Java/Angel_InterfacesBolas/
+   62  git init
+   63  git statys
+   64  git status
+   65  git add .
+   66  git status
+   67  git commit -m "test commit"
+   68  git remote add origin https://github.com/velkha/Angel_InterfacesBolas.git
+   69  git push -u origin master
+   70  git checkout -b testbranch
+   71  git branch
+   72  git remote rm origin
+   73  git remote
+   74  git remote add origin https://github.com/velkha/Angel_Bolas.git
+   75  git status
+   76  git push origin testbranch
+   77  git pull origin testbranch
+   78  git push origin testbranch:master
+   79  git push origin testbranch:master --force
+   80  git init
+   81  git add index.html 
+   82  git status
+   83  git commit
+   84  git config
+   85  git config --list
+   86  cd /d/
+   87  cd test\ git/
+   88  git init
+   89  git branch
+   90  git branch -a
+   91  git branch test_branch
+   92  git branch 
+   93  git branch --help
+   94  git branch --list
+   95  git status
+   96  git add test1.html
+   97  git commit
+   98  git status
+   99  git branch test1
+  100  git -a
+  101  git branch -a
+  102  git checkout test1
+  103  git status
+  104  git status
+  105  git commit test1.html
+  106  git status
+  107  git checkout master 
+  108  git status
+  109  git checkout test1 
+  110  git status
+  111  git commit
+  112  git commit test1.html
+  113  git status
+  114  git log
+  115  git checkout master 
+  116  git checkout test1 
+  117  cd /d/test\ git/
+  118  git --help
+  119  git checkout master
+  120  git
+  121  git --help
+  122  git -a
+  123  git merge test1 
+  124  git checkout test1 
+  125  git log
+  126  git checkout master 
+  127  git log
+  128  git log -a
+  129  pwd
+  130  cd C:\Users\_Diego\Desktop\_examen di
+  131  cd C:/Users/_Diego/Desktop/_examen di
+  132  cd Desktop/
+  133  ls
+  134  cd _examen di
+  135  cd _examen
+  136  cd Desktop/
+  137  cd _examen_di
+  138  git init
+  139  git branch textBranch1
+  140  git add Examen\ hilos.pdf 
+  141  git commit 
+  142  git branch Testbranch1
+  143  git branch
+  144  git checkout Testbranch1 
+  145  git status
+  146  git log
+  147  git add 1.\ Introducción\ a\ Git.pdf 
+  148  git commit 
+  149  git log
+  150  git checkout master 
+  151  git log
+  152  git checkout testBranch1
+  153  git checkout master
+  154  git merge testBranch1 
+  155  git diff master testBranch1
+  156  git diff master..testBranch1
+  157  git add 3.\ Commit\ -\ reset\ y\ rm\(1\).pdf 
+  158  git commit -m "test"
+  159  git diff master..testBranch1
+  160  help git log
+  161  cd Desktop/
+  162  cd examen/ Android
+  163  cd Agenda/
+  164  ls
+  165  git init
+  166  git add test.html 
+  167  git log 
+  168  git commit
+  169  git log -a
+  170  git help log
+  171  git log --all
+  172  git branch test
+  173  git checkout test
+  174  git add bootstrap-4.5.3
+  175  git commit 
+  176  git log
+  177  git checkout master 
+  178  git log
+  179  git log -a
+  180  git log --all
+  181  git log
+  182  git log --all
+  183  git log --stats
+  184  git log --stat
+  185  git log --stat --all
+  186  git gggasd
+  187  cd Desktop/
+  188  cd Agenda/
+  189  log
+  190  git log
+  191  git log >> test.txt
+  192  git log --stat --all >> test.txt
+  193   git log
+  194  git log --all
+  195  cd Desktop/
+  196  cd Agenda/
+  197  ls
+  198  git log
+  199  git log --all
+  200  cd C:\xampp\htdocs\trinitempus
+  201  C:/xampp/htdocs/trinitempus
+  202  cd /
+  203  cd xampp/htdocs
+  204  cd xampp
+  205  ls
+  206  cd ..
+  207  cd ..
+  208  pwd
+  209  cd C:/
+  210  cd xampp/htdocs
+  211  cd trinitempus/
+  212  git init
+  213  git remote add origin https://github.com/velkha/trinitempus.git
+  214  git remote
+  215  git pull origin master
+  216  git pull origin master
+  217  git add *
+  218  git log
+  219  git status
+  220  git commit
+  221  git status
+  222  git push origin master
+  223  git branch test
+  224  git branch development
+  225  git checkout development 
+  226  git push origin development 
+  227  git status
+  228  git add Capturas\ del\ Progreso/
+  229  git status
+  230  git commit 
+  231  git pull origin master
+  232  git push origin development 
+  233  git pull origin development 
+  234  git pull origin master 
+  235  git push origin development 
+  236  git status
+  237  git add Capturas\ del\ Progreso/
+  238  git commit
+  239  git status
+  240  git status
+  241  git add saveDirsOrder.bat 
+  242  git commit
+  243  git commit
+  244  git push origin development 
+  245  cd C:\xampp\htdocs\trinitempus\Capturas del Progreso\Adobe XD
+  246  cd c/
+  247  cd C
+  248  cd /c
+  249  cd xampp/
+  250  cd htdocs/
+  251  cd trinitempus/
+  252  cd Capturas\ del\ Progreso/
+  253  cd..
+  254  cd ..
+  255  git status
+  256  git add *
+  257  git pull origin development 
+  258  git status
+  259  git commit -m add de las capturas de adobe xd de hoy
+  260  git commit -m "add de las capturas de adobe xd de hoy"
+  261  git status
+  262  git push origin development 
+  263  cd /c
+  264  cd xampp/
+  265  cd htdocs/
+  266  cd trinitempus/
+  267  git add *
+  268  git push origin development 
+  269  git commit -m "correccion de las fotos"
+  270  git push origin development 
+  271  history
+  272  history >> historialgitPrimeraEntrega.sbl
