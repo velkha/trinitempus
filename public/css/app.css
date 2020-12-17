@@ -1,0 +1,182 @@
+
+/*
+
+---------------------------------------------------------         CONFIGURACIONES GENERALES DEL INICIO           -------------------------------------------------------------------------------
+
+*/
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/*
+
+---------------------------------------------------------                CONFIGURACION DEL HTML GENERAL           -------------------------------------------------------------------------------
+
+*/
+html {
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+/*
+
+---------------------------------------------------------              CONFIGURACIONES DEL NAV                    -------------------------------------------------------------------------------
+
+*/
+nav {
+    z-index: 1000;
+    position:fixed;
+    background-image: url("../assets/local/amber.jpg");
+    background-color: #ffaa00;
+    background-size: 100% 100%;
+    color: #ffffff;
+    margin: 5%;
+    margin-top: 0%;
+    width: 90%;
+    height: 8em;
+    border-radius: 2em;
+
+}
+/*
+
+---------------------------------------------------------                     CONFIGURACIONES DEL SECION         -------------------------------------------------------------------------------
+
+*/
+section{
+    padding-top: 8em;
+    background-image: url("../assets/local/clocks.jpg");
+    background-color: black;
+
+}
+section *{
+    color: white;
+}
+section *:first-child{
+    color: #ffaa00;
+    text-align: center;
+}
+p+img {
+    width: 100%;
+    max-width: 10em;
+    height: auto;
+}
+
+/*
+
+---------------------------------------------------------                  configuraciones galeria                -------------------------------------------------------------------------------
+
+*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+.gallery__item img{
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    object-fit: fill;
+    content: url("../assets/local/foca.jpg");
+}
+.img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.gallery__item:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+}
+.imageCenter {
+    text-align: center;
+}
+/*
+
+---------------------------------------------------------                 configuraciones aside                   -------------------------------------------------------------------------------
+
+*/
+.aside {
+    background-image: url("../assets/local/blue.jpg");
+    background-color: #4d45ba;
+    border-radius: 2em;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.aside:hover{
+    background-color: black;
+    background-image: none;
+}
+
+/*
+
+---------------------------------------------------------              configuracion footer                      -------------------------------------------------------------------------------
+
+*/
+footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    top: 90%;
+}
+
+/*
+
+---------------------------------------------------------               configuraciones finales y adaptadores segun tamaño de screen     --------------------------------------------------------
+
+*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px){
+    * {
+        font-size: 12px;
+    }
+    footer{
+        background-color: black;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
