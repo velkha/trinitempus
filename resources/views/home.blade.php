@@ -7,7 +7,7 @@
 </head>
 <body>
 <nav>
-    <h1>Chania</h1>
+    @extends('nav')
 </nav>
 <section>
     <div class="row imageCenter">
@@ -99,6 +99,5 @@
     </div>
 </section>
 @extends('footer')
-
 </body>
 </html>

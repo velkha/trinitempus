@@ -58,8 +58,8 @@ nav{
 nav p{
     left: 25%;
     top: 50%;
-position: absolute;
-font-size: 15px;
+    position: absolute;
+    font-size: 15px;
 }
 
 nav .fotoLogo{
@@ -256,6 +256,7 @@ footer .contact_us p {
 */
 
 footer .copyright {
+    background-color: black;
     margin-top: 1%;
     border-radius: 2em;
     border: black 2px solid;
