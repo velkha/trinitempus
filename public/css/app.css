@@ -32,6 +32,10 @@ html {
     font-size: 20px;
     color: white;
 }
+body{
+    background-color: black;
+    background-image: url("../assets/local/clocks.jpg");
+}
 /*
 
 ---------------------------------------------------------              CONFIGURACIONES DEL NAV                    -------------------------------------------------------------------------------
@@ -45,10 +49,10 @@ nav{
     background-color: #ffaa00;
     background-size: 100% 100%;
     position: fixed;
-      height: 8em;
-      left: 10%;
-      width: 80%;
-color: #ffffff;
+    height: 8em;
+    left: 10%;
+    width: 80%;
+    color: #ffffff;
 }
 
 nav p{
@@ -140,8 +144,7 @@ nav ul+div p{
 */
 section{
     padding-top: 8em;
-    background-image: url("../assets/local/clocks.jpg");
-    background-color: black;
+    /**/
 
 }
 section.error{
