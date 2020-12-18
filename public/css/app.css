@@ -41,7 +41,7 @@ html {
 nav{
     border-radius: 2em;
     z-index: 100;
-    background-image: url("../assets/local/amber.jpg"); 
+    background-image: url("../assets/local/amber.jpg");
     background-color: #ffaa00;
     background-size: 100% 100%;
     position: fixed;
@@ -54,7 +54,7 @@ color: #ffffff;
 nav p{
     left: 25%;
     top: 50%;
-position: absolute; 
+position: absolute;
 font-size: 15px;
 }
 
@@ -82,7 +82,7 @@ nav div{
     position: fixed;
     left: 75%;
     top: 12%;
-    background-image: url("../assets/local/blue.jpg"); 
+    background-image: url("../assets/local/blue.jpg");
     background-color: #ffaa00;
     background-size: 100% 100%;
     width: 13%;
@@ -119,7 +119,7 @@ nav div ul li{
     width: 100%;
 }
 
-nav div p{  
+nav div p{
     top: -20%;
     left: 25%;
 }
@@ -142,6 +142,11 @@ section{
     padding-top: 8em;
     background-image: url("../assets/local/clocks.jpg");
     background-color: black;
+
+}
+section.error{
+    background-color: #333333;
+    background-image: none;
 
 }
 section *{
@@ -221,13 +226,73 @@ p+img {
 
 */
 footer {
+    text-align: center;
+}
+
+footer .contact_us {
+    font-size: 12px;
+    border-radius: 2em;
     background-color: #0099cc;
     color: #ffffff;
-    text-align: center;
-    font-size: 12px;
     padding: 15px;
     top: 90%;
 }
+/*
+
+---------------------------------------------------------               botones & hipervinculos    --------------------------------------------------------
+
+*/
+
+
+.errorButton {
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color:#ffec64;
+    font-size:  2em;
+    border-radius:1em;
+    border:0.2em solid #000000;
+    display:inline-block;
+    cursor:pointer;
+
+    font-family: Arial, serif;
+    font-weight:bold;
+    padding:1em 2em;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #000000;
+    color: #ff6c00;
+}
+.errorButton:hover {
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffbc47;
+}
+.errorButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+footer .contact_us p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+/* para los emoticonos
+
+.content-3 .glyphicon,	.page-footer .contact .glyphicon {
+	font-size: 32px;
+	font-weight: 700;
+	}
+*/
+
+footer .copyright {
+    margin-top: 1%;
+    border-radius: 2em;
+    border: black 2px solid;
+    padding: 50px 0 40px;
+    font-weight: 300;
+}
+
 
 /*
 
