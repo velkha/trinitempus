@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>HOME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
@@ -10,14 +11,11 @@
 </nav>
 <section>
     <div class="row imageCenter">
-        <div class="col-3">
-            <img src="{{asset('assets/local/test.png')}}" class="responsive" />
-        </div>
 
-        <div class="col-6">
+        <div class="col-9">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-            <img src="{{asset('assets/local/img200.png')}}" />
+            <img src="{{asset('assets/local/fulllogo.png')}}" />
             <h2>What?</h2>
             <p>Chania is a city on the island of Crete.</p>
         </div>
