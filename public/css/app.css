@@ -37,19 +37,101 @@ html {
 ---------------------------------------------------------              CONFIGURACIONES DEL NAV                    -------------------------------------------------------------------------------
 
 */
-nav {
-    z-index: 1000;
-    position:fixed;
-    background-image: url("../assets/local/amber.jpg");
+
+nav{
+    border-radius: 2em;
+    z-index: 100;
+    background-image: url("../assets/local/amber.jpg"); 
     background-color: #ffaa00;
     background-size: 100% 100%;
-    color: #ffffff;
-    margin: 5%;
-    margin-top: 0%;
-    width: 90%;
-    height: 8em;
-    border-radius: 2em;
+    position: fixed;
+      height: 8em;
+      left: 10%;
+      width: 80%;
+color: #ffffff;
+}
 
+nav p{
+    left: 25%;
+    top: 50%;
+position: absolute; 
+font-size: 15px;
+}
+
+nav .fotoLogo{
+    top: 5%;
+    z-index: 1000;
+    left: 2%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+nav .fotoPerfil{
+    position: absolute;
+    z-index: 10;
+    top: -280%;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+}
+
+nav div{
+    border-radius: 2em;
+    z-index: 2;
+    position: fixed;
+    left: 75%;
+    top: 12%;
+    background-image: url("../assets/local/blue.jpg"); 
+    background-color: #ffaa00;
+    background-size: 100% 100%;
+    width: 13%;
+    height: 2em;
+}
+
+nav ul{
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 60%;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    padding-left: 20px;
+}
+
+nav>p{
+    font-size: 30px;
+    position: absolute;
+    top: 5%;
+    left: 40%;
+}
+nav div ul{
+    font-size: 14px;
+    top: -120%;
+    left: 10%;
+}
+
+nav div ul li{
+    display: block;
+    width: 100%;
+}
+
+nav div p{  
+    top: -20%;
+    left: 25%;
+}
+
+nav ul+div{
+    background-color: transparent;
+    background-image: none;
+    top: 15%;
+}
+
+nav ul+div p{
+    font-size: 12px;
 }
 /*
 
