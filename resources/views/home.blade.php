@@ -7,7 +7,7 @@
 </head>
 <body>
 <nav>
-    <h1>Chania</h1>
+    @extends('nav')
 </nav>
 <section>
     <div class="row imageCenter">
@@ -98,9 +98,6 @@
         </div>
     </div>
 </section>
-<footer>
-    <p>Resize the browser window to see how the content respond to the resizing.</p>
-</footer>
-
+@extends('footer')
 </body>
 </html>

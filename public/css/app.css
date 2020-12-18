@@ -32,6 +32,10 @@ html {
     font-size: 20px;
     color: white;
 }
+body{
+    background-color: black;
+    background-image: url("../assets/local/clocks.jpg");
+}
 /*
 
 ---------------------------------------------------------              CONFIGURACIONES DEL NAV                    -------------------------------------------------------------------------------
@@ -45,17 +49,17 @@ nav{
     background-color: #ffaa00;
     background-size: 100% 100%;
     position: fixed;
-      height: 8em;
-      left: 10%;
-      width: 80%;
-color: #ffffff;
+    height: 8em;
+    left: 10%;
+    width: 80%;
+    color: #ffffff;
 }
 
 nav p{
     left: 25%;
     top: 50%;
-position: absolute;
-font-size: 15px;
+    position: absolute;
+    font-size: 15px;
 }
 
 nav .fotoLogo{
@@ -140,8 +144,7 @@ nav ul+div p{
 */
 section{
     padding-top: 8em;
-    background-image: url("../assets/local/clocks.jpg");
-    background-color: black;
+    /**/
 
 }
 section.error{
@@ -236,6 +239,29 @@ footer .contact_us {
     color: #ffffff;
     padding: 15px;
     top: 90%;
+}
+
+footer .contact_us p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+/* para los emoticonos
+
+.content-3 .glyphicon,	.page-footer .contact .glyphicon {
+	font-size: 32px;
+	font-weight: 700;
+	}
+*/
+
+footer .copyright {
+    background-color: black;
+    margin-top: 1%;
+    border-radius: 2em;
+    border: black 2px solid;
+    padding: 50px 0 40px;
+    font-weight: 300;
 }
 /*
 
