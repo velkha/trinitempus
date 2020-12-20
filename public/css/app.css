@@ -43,11 +43,13 @@ body{
 */
 
 nav{
-    border-radius: 2em;
-    z-index: 100;
     background-image: url("../assets/local/amber.jpg");
     background-color: #ffaa00;
     background-size: 100% 100%;
+}
+section.nav,nav{
+    border-radius: 2em;
+    z-index: 100;
     position: fixed;
     height: 8em;
     left: 10%;
@@ -55,86 +57,91 @@ nav{
     color: #ffffff;
 }
 
-nav p{
+section.nav div p{
     left: 25%;
     top: 50%;
-    position: absolute;
+    position: fixed;
     font-size: 15px;
 }
 
-nav .fotoLogo{
-    top: 5%;
+section.nav div img.photo{
+    top: 3%;
     z-index: 1000;
-    left: 2%;
+    left: 12%;
     width: 100px;
     height: 100px;
-    position: absolute;
+    position: fixed;
 }
 
-nav .fotoPerfil{
-    position: absolute;
+section.nav div .profile{
+    position: fixed;
     z-index: 10;
-    top: -280%;
-    left: 40%;
+    top: 20px;
+    left: 77%;
     width: 50px;
     height: 50px;
 }
 
-nav div{
+section.nav div.init{
     border-radius: 2em;
     z-index: 2;
     position: fixed;
     left: 75%;
     top: 12%;
-    background-image: url("../assets/local/blue.jpg");
+    background-image: url("../assets/local/blue.jpg");;
     background-color: #ffaa00;
     background-size: 100% 100%;
     width: 13%;
     height: 2em;
 }
 
-nav ul{
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    top: 60%;
+section.nav div ul{
+    position: fixed;
+    width: auto;
+    left: 35%;
+    font-size: 14px;
+    top: 120px;
 }
 
-nav ul li{
+section.nav div ul li{
     list-style: none;
     display: inline;
     padding-left: 20px;
 }
 
-nav>p{
+section.nav div>p{
     font-size: 30px;
-    position: absolute;
+    position: fixed;
     top: 5%;
     left: 40%;
 }
-nav div ul{
-    font-size: 14px;
-    top: -120%;
-    left: 10%;
-}
 
-nav div ul li{
+
+section.nav div ul li.date{
+
     display: block;
-    width: 100%;
+
 }
 
-nav div p{
-    top: -20%;
-    left: 25%;
+section.nav div p.log{
+    position: absolute;
+    top: -15%;
+    left: 26%;
 }
-
-nav ul+div{
+section.nav div ul.list{
+    left: 75%;
+    top: 85px;
+}
+section.nav ul+div{
+    position: fixed;
     background-color: transparent;
     background-image: none;
     top: 15%;
 }
 
-nav ul+div p{
+section.nav div p a{
+text-decoration: none;
+    color: white;
     font-size: 12px;
 }
 /*
@@ -155,10 +162,7 @@ section.error{
 section *{
     color: white;
 }
-section *:first-child{
-    color: #ffaa00;
-    text-align: center;
-}
+
 p+img {
     width: 100%;
     max-width: 10em;
@@ -263,6 +267,55 @@ footer .copyright {
     padding: 50px 0 40px;
     font-weight: 300;
 }
+/*
+
+----------------------------------------------- Listados ------------------------------------------------
+
+ */
+section.list_templates{
+    position: absolute;
+    top: 30%;
+}
+section.list_templates>div{
+    position: absolute;
+    top: 0;
+    left: 50px;
+
+}
+section.list_templates div select{
+    position: absolute;
+    top: 30px;
+    color: black;
+    left: 519px;
+
+}
+section.list_templates div select option{
+    color: black;
+}
+
+section.list_templates div select+input{
+    position: absolute;
+    top: 30px;
+    left: 600px;
+    width: 300px;
+    color: black;
+}
+section.list_templates div input+input{
+    position: absolute;
+    top: 30px;
+    color: black;
+    left: 900px;
+}
+section.list_templates div table{
+    position: absolute;
+    top: 90px;
+    left: 210px;
+}
+section.list_templates div table tr td{
+    color: black;
+    padding-left: 80px;
+}
+
 /*
 
 ---------------------------------------------------------               botones & hipervinculos    --------------------------------------------------------
