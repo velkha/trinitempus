@@ -8,6 +8,7 @@
 <body>
 <nav>
     @extends('nav')
+    @section('TextoModif','Home')
 </nav>
 <section>
     <div class="row imageCenter">

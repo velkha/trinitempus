@@ -7,7 +7,6 @@
 <nav>
     @extends('nav')
 </nav>
-
 <section class="list_templates">
     <div>
          <select name="filter" >
@@ -28,6 +27,8 @@
         @show
     </div>
 </section>
+
+@extends('footer')
 </body>
 </html>
 

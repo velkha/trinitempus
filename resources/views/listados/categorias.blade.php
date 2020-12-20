@@ -1,5 +1,5 @@
 @extends('plantilla_listados')
-
+@section('TextoModif','Listado Categorias')
 @section('tabla')
     <table>
         <tr>

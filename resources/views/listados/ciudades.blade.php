@@ -1,5 +1,5 @@
 @extends('plantilla_listados')
-
+@section('TextoModif','Listado Ciudades')
 @section('tabla')
 <table>
     <tr>

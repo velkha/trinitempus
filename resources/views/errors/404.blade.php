@@ -1,7 +1,7 @@
-@extends('plantilla_errores');
+@extends('plantilla_errores')
 
-@section('nav', 'esto es un nav');
+@section('nav', 'esto es un nav')
 
-@section('title', '404 :c');
+@section('title', '404 :c')
 
-@section('codigo_error', '404');
+@section('codigo_error', '404')

@@ -1,5 +1,5 @@
 @extends('plantilla_listados')
-
+@section('TextoModif','Listado Usuarios')
 @section('tabla')
     <table>
         <tr>
@@ -12,5 +12,4 @@
         </tr>
 
     </table>
-
 @endsection
