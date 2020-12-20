@@ -6,10 +6,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
+@extends('nav')
 <section class="error">
-    @section('nav')
 
-     @show
     <div class="row">
 
         <div class="col-3">
