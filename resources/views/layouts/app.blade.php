@@ -21,12 +21,12 @@
 </head>
 <body>
     <div id="app">
-        @include('nav')
+        @include('footer-nav.nav')
 
         <div class="py-4">
             @yield('content')
         </div>
     </div>
 </body>
-@extends('footer')
+@extends('footer-nav.footer')
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav>
-    @include('nav')
+    @include('footer-nav.nav')
 </nav>
 <section>
 
@@ -21,6 +21,6 @@
         </div>
     </div>
 </section>
-@include('footer')
+@include('footer-nav.footer')
 </body>
 </html>

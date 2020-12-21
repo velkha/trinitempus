@@ -55,6 +55,6 @@
     </form>
     </div>
 </section>
-@extends('footer')
+@extends('footer-nav.footer')
 </body>
 </html>

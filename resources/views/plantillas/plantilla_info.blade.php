@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
-@include('nav')
+@include('footer-nav.nav')
 <section class="">
     <div class="row">
         <div class="col-3"></div>
@@ -42,7 +42,7 @@
 
 
 
-@include('footer')
+@include('footer-nav.footer')
 </body>
 </html>
 
