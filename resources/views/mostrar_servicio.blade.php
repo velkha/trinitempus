@@ -1,4 +1,4 @@
-@extends('plantilla_perfiles')
+@extends('plantillas.plantilla_perfiles')
 
 @section('imagenPrincipal')
     {{asset('assets/local/foca.jpg')}}

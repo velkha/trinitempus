@@ -43,98 +43,105 @@ body{
 */
 
 nav{
+    top: 0;
     border-radius: 2em;
     z-index: 100;
-    background-image: url("../assets/local/amber.jpg");
-    background-color: #ffaa00;
-    background-size: 100% 100%;
     position: fixed;
     height: 8em;
     left: 10%;
     width: 80%;
     color: #ffffff;
+    background-image: url("../assets/local/amber.jpg");
+    background-color: #ffaa00;
+    background-size: 100% 100%;
 }
 
-nav p{
+nav div p{
     left: 25%;
     top: 50%;
-    position: absolute;
+    position: fixed;
     font-size: 15px;
 }
 
-nav .fotoLogo{
-    top: 5%;
+nav div img.photo{
+    top: 5px;
     z-index: 1000;
-    left: 2%;
-    width: 100px;
-    height: 100px;
-    position: absolute;
+    left: 12%;
+    width: 90px;
+    height: 90px;
+    position: fixed;
 }
 
-nav .fotoPerfil{
-    position: absolute;
+nav div .profile{
+    position: fixed;
     z-index: 10;
-    top: -280%;
-    left: 40%;
+    top: 20px;
+    left: 77%;
     width: 50px;
     height: 50px;
 }
 
-nav div{
+nav div.init{
     border-radius: 2em;
     z-index: 2;
     position: fixed;
-    left: 75%;
-    top: 12%;
-    background-image: url("../assets/local/blue.jpg");
+    left: 73%;
+    top: 56px;
+    background-image: url(../assets/local/blue.jpg);
     background-color: #ffaa00;
     background-size: 100% 100%;
-    width: 13%;
-    height: 2em;
+    width: 12%;
+    height: 40px;
 }
 
-nav ul{
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    top: 60%;
+nav div ul{
+    position: fixed;
+    width: auto;
+    left: 35%;
+    font-size: 14px;
+    top: 80px;
 }
 
-nav ul li{
+nav div ul li{
     list-style: none;
     display: inline;
     padding-left: 20px;
 }
 
-nav>p{
+nav div>p{
     font-size: 30px;
-    position: absolute;
-    top: 5%;
+    position: fixed;
+    top: 5px;
     left: 40%;
 }
-nav div ul{
-    font-size: 14px;
-    top: -120%;
-    left: 10%;
-}
 
-nav div ul li{
+
+nav div ul li.date{
+
     display: block;
-    width: 100%;
+
 }
 
-nav div p{
-    top: -20%;
-    left: 25%;
+nav div p.log{
+    position: absolute;
+    font-size: 20px;
+    top: -5px;
+    left: 26%;
 }
-
+nav div ul.list{
+    left: 75%;
+    top: 85px;
+}
 nav ul+div{
+    position: fixed;
     background-color: transparent;
     background-image: none;
     top: 15%;
 }
 
-nav ul+div p{
+nav div p a{
+text-decoration: none;
+    color: white;
     font-size: 12px;
 }
 /*
@@ -155,6 +162,7 @@ section.error{
 section *{
     color: white;
 }
+
 p+img {
     width: 100%;
     max-width: 10em;
@@ -287,6 +295,65 @@ footer .copyright {
     padding: 50px 0 40px;
     font-weight: 300;
 }
+
+/*
+
+----------------------------------------------- Listados ------------------------------------------------
+
+ */
+section.list_templates{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 35px;
+}
+section.list_templates>div{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    top: 30px;
+    left: 50px;
+    width: 90%;
+    height: auto;
+background-color: white;
+}
+section.list_templates>div.search{
+    background-color: transparent;
+}
+section.list_templates div select{
+    position: relative;
+    background-color: white;
+    color: black;
+    left: 238px;
+
+}
+section.list_templates div select option{
+    color: black;
+    background-color: white;
+}
+
+section.list_templates div select+input{
+    position: relative;
+    left: 233px;
+    background-color: white;
+    width: 300px;
+    color: black;
+}
+section.list_templates div input+input{
+    position: relative;
+    color: black;
+    background-color: white;
+    left: 227px;
+}
+section.list_templates div table{
+    position: relative;
+    left: 10px;
+}
+section.list_templates div table tr td{
+    color: black;
+    padding-left: 80px;
+}
+
 /*
 
 ---------------------------------------------------------               botones & hipervinculos    --------------------------------------------------------
@@ -408,7 +475,7 @@ div.center *{
     margin: 0 auto;
     text-align: center
 }
-.withBackground{
+.withBackground {
     color: #f7fafc;
     background-color: #1a202c;
 }
