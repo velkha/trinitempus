@@ -25,7 +25,7 @@
 
         </div>
         <div class="col-4 ">
-            <a href="/" class="standard">Volver al innicio</a>
+            <a href="{{url("/")}}" class="standard">Volver al innicio</a>
         </div>
         <div class="col-4 ">
             <a href="#" class="standard">Mis Servicios</a>
