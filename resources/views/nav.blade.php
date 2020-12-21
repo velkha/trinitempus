@@ -3,7 +3,7 @@
     <!-- Este div se encargará de mostrar el logo de la página y con el section mostraremos
     en que pagina estamos en cada momento-->
     <div>
-        <img src="{{asset('assets/local/logo.png')}}" class="photo" />
+       <a href="{{url('/')}}"> <img src="{{asset('assets/local/logo.png')}}" class="photo" /> </a>
         <p> @section('TextoModif') @show</p>
     </div>
     <!-- Si no ha iniciado sesion se le mostrara el div con las opciones de login y register que
@@ -26,8 +26,8 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
                 @endif
                 <li>servicios</li>
             @endif
-            <li>Contact</li>
-            <li>About</li>
+            <li><a href="{{url('/contact')}}">Contact</a></li>
+            <li><a href="{{url('/about')}}">About us</a></li>
         </ul>
     </div>
     <!-- si el usuario ha iniciado sesion mostraremos su foto de perfil el saldo y una opcion para deslogearse-->

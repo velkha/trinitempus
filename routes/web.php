@@ -23,10 +23,14 @@ Route::get('/perfil', function () {
 Route::get('/test', function () {
     return view('secciones_multiples');
 });
-
-
 Auth::routes();
 
+Route::get('/contact',function () {
+    return view('infos/contact');
+});
+Route::get('/about',function () {
+    return view('infos/about');
+});
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

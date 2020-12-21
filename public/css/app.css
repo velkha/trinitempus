@@ -11,7 +11,10 @@
     padding: 0px;
     margin: 0px;
 }
-
+.row{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 .row::after {
     content: "";
     clear: both;
@@ -21,6 +24,10 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 /*
 
