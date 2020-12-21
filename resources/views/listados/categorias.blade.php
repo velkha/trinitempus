@@ -1,6 +1,7 @@
 
 @extends('plantillas.plantilla_listados')
 @section('TextoModif','Listado Categorias')
+@section('listType', 'categorias')
 @section('tabla')
     <div class="row" id="lista_categorias">
         <div class="col-2">ID</div>
@@ -10,7 +11,8 @@
         <div class="col-2">Modificar</div>
         <div class="col-2">Borrar</div>
     </div>
-
+@endsection
+@section('zonaExtra')
     <div class="row">
         <div class="col-4"></div>
 
