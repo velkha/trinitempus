@@ -23,10 +23,14 @@ Route::get('/perfil', function () {
 Route::get('/test', function () {
     return view('secciones_multiples');
 });
-Route::get('/lista', function () {
-    return view('listados/categorias');
-});
 Auth::routes();
+
+Route::get('/contact',function () {
+    return view('infos/contact');
+});
+Route::get('/about',function () {
+    return view('infos/about');
+});
 
 
 
