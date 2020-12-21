@@ -1,4 +1,5 @@
-@extends('plantilla_listados')
+
+@extends('plantillas.plantilla_listados')
 @section('TextoModif','Listado Usuarios')
 @section('tabla')
     <div class="row" id="lista_usuarios">
@@ -9,3 +10,4 @@
         <div class="col-2">Borrar</div>
     </div>
 @endsection
+

@@ -11,7 +11,10 @@
     padding: 0px;
     margin: 0px;
 }
-
+.row{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 .row::after {
     content: "";
     clear: both;
@@ -21,6 +24,10 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 /*
 
@@ -387,7 +394,6 @@ section.list_templates div table tr td{
     top:1px;
 }
 
-
 .col-md-6 button {
     box-shadow:inset 0px 1px 0px 0px #fff6af;
     background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
@@ -407,7 +413,7 @@ section.list_templates div table tr td{
     color: black;
 
     width: 150px;
-    margin-left: 55%;
+    margin-left: 60%;
 }
 .col-md-6 button:hover {
     background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
@@ -456,11 +462,6 @@ section.list_templates div table tr td{
     padding-bottom: 5%;
     padding-left: 35%;
 }
-.card{
-    background-color: white;
-    color: black;
-    border-radius: 2em;
-}
 
 .card-header{
     text-align: center;
@@ -471,6 +472,7 @@ section.list_templates div table tr td{
 .col-md-6 input {
     border-radius: 2em;
 }
+
 /*
 ---------------------------------------------------------               configuraciones de colores y textos   --------------------------------------------------------
 
@@ -483,8 +485,6 @@ div.center *{
 .withBackground {
     color: #f7fafc;
     background-color: #1a202c;
-
-
 }
 
 .form-check-label{

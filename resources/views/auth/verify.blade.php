@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
+@section('TextoModif', 'Verify Your Email Address')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="withBackground">
                 <br>
                 <div class="img-logo-circular">
                     <img src="{{asset('assets/local/fulllogocircular.png')}}" class="center">

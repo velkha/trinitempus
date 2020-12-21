@@ -7,9 +7,9 @@
 <script type="text/javascript" src="{{ asset('js/app.js') }}">
 </script>
 
-
 <body>
     @include('nav')
+    @include('footer-nav.nav')
 
 <section>
     <div class="row">
@@ -48,7 +48,7 @@
     </div>
 
 </section>
-    @include('footer')
+    @include('footer-nav.footer')
 </body>
 
 </html>

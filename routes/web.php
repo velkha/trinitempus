@@ -24,7 +24,36 @@ Route::get('/test', function () {
     return view('listados/categorias');
 });
 Auth::routes();
+
+Route::get('/contact',function () {
+    return view('infos/contact');
+});
+Route::get('/about',function () {
+    return view('infos/about');
+});
+Route::get('admin',function () {
+    return view('admin/opciones');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/lista', function () {
+
+//Rutas solo accesibles para los admins
+Route::get('/listaCiudad', function () {
+    return view('listados/ciudades');
+});
+Route::get('/listaCategoria', function () {
     return view('listados/categorias');
 });
+Route::get('/listaUsuario', function () {
+    return view('listados/usuarios');
+});
+Route::get('/nuevaCiudad', function () {
+    return view('admin/nueva_ciudad');
+});
+Route::get('/nuevaCategoria', function () {
+    return view('admin/nueva_Categoria');
+});
+
+
+
+
+
