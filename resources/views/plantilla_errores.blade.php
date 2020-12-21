@@ -8,7 +8,10 @@
 <body>
 <nav>
     @extends('nav')
+<<<<<<< HEAD
 
+=======
+>>>>>>> 58fe59e87909f46019bee5493342f8a6a6321d46
 </nav>
 <section class="error">
 
@@ -33,9 +36,7 @@
 
         </div>
     </div>
-    @section('footer')
-
-    @show
+    @extends('footer')
 </section>
 </body>
 </html>
