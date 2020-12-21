@@ -5,8 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <br>
+                <div class="img-logo-circular">
+                    <img src="{{asset('assets/local/fulllogocircular.png')}}" class="center">
+                </div>
+                <br>
                 <div class="card-header">{{ __('Register') }}</div>
-
+                <br>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf

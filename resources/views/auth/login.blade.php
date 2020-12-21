@@ -6,8 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <br>
-                <div>
-                    <img src="{{asset('assets/local/fulllogocircular.png')}}">
+                <div class="img-logo-circular">
+                    <img src="{{asset('assets/local/fulllogocircular.png')}}" class="center">
                 </div>
                 <br>
                 <div class="card-header">{{ __('Login') }}</div>
