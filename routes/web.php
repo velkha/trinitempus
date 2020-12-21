@@ -36,5 +36,9 @@ Route::get('/about',function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+Route::get('/compra', function () {
+    return view('servicios/comprar_servicio');
+});
+
 
 

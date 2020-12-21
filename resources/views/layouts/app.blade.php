@@ -28,5 +28,5 @@
         </div>
     </div>
 </body>
-@extends('footer-nav.footer')
+@include('footer-nav.footer')
 </html>
