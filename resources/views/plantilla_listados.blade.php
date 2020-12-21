@@ -2,9 +2,13 @@
 <head>
     <title></title>
 </head>
-<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
-<body>
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
+<script type="text/javascript" src="{{ asset('js/app.js') }}">
+</script>
+
+
+<body>
     @include('nav')
 
 <section>
@@ -32,7 +36,13 @@
                     @section('tabla')
                     @show
                 </div>
-
+            </div>
+            {{\App\Http\Controllers\GenerateDataController::generarLista(app()->view->getSections()['listType'])}}
+            <div class="row">
+                <div class="col-12">
+                    @section('zonaExtra')
+                    @show
+                </div>
             </div>
         </div>
     </div>

@@ -31,31 +31,26 @@ function generateGallery(){
     }
 }
 
+function getArray (){
 
-function generateList(phpArray, nombre_lista){
+    document.getElementById("test").innerHTML="hola";
+}
+function getArray (some){
 
+    document.getElementById("test1").innerHTML=some;
+}
+
+function generateList(arrayJson, nombre_lista){
+    var phpArray=arrayJson;
     var div;
     var auxDiv;
     var content;
     var sibling;
     var colmnSize= 12/phpArray[0].lenght;
     colmnSize= parseInt(colmnSize);
+    var test=document.getElementById("test").innerHTML=phpArray;
 
 
-    for(var i=0;i<phpArray.lenght; i++){
-        div = document.createElement('div');
-        div.setAttribute('class', 'row');
-        for(var j=0; j<phpArray[i].lenght; j++){
-            auxDiv = document.createElement('div');
-            auxDiv.setAttribute('class', 'col-'+colmnSize);
-            content = document.createElement('p');
-            content.textContent = ""+phpArray[i][j];
-            auxDiv.appendChild(content);
-            div.appendChild(auxDiv);
-        }
-        sibling=document.getElementById("lista_"+nombre_lista);
-        sibling.insertAdjacentHTML("afterend", div);
-    }
 }
 
 

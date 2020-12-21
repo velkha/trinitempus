@@ -21,7 +21,7 @@ Route::get('/perfil', function () {
     return view('personal_profile');
 });
 Route::get('/test', function () {
-    return view('secciones_multiples');
+    return view('listados/categorias');
 });
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
