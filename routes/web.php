@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/perfil', function () {
     return view('personal_profile');
 });
-Auth::routes();
+Route::get('/test', function () {
+    return view('cambiar_perfil');
+});
+/*Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
