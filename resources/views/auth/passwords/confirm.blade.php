@@ -1,12 +1,19 @@
 @extends('layouts.app')
 
+@section('TextoModif', 'Confirm Password')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="withBackground">
+                <br>
+                <div class="img-logo-circular">
+                    <img src="{{asset('assets/local/fulllogocircular.png')}}" class="center">
+                </div>
+                <br>
                 <div class="card-header">{{ __('Confirm Password') }}</div>
-
+                <br>
                 <div class="card-body">
                     {{ __('Please confirm your password before continuing.') }}
 

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +21,39 @@ Route::get('/perfil', function () {
     return view('personal_profile');
 });
 Route::get('/test', function () {
-    return view('secciones_multiples');
+    return view('listados/categorias');
 });
-/*Auth::routes();
+Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
+Route::get('/contact',function () {
+    return view('infos/contact');
+});
+Route::get('/about',function () {
+    return view('infos/about');
+});
+Route::get('admin',function () {
+    return view('admin/opciones');
+});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Rutas solo accesibles para los admins
+Route::get('/listaCiudad', function () {
+    return view('listados/ciudades');
+});
+Route::get('/listaCategoria', function () {
+    return view('listados/categorias');
+});
+Route::get('/listaUsuario', function () {
+    return view('listados/usuarios');
+});
+Route::get('/nuevaCiudad', function () {
+    return view('admin/nueva_ciudad');
+});
+Route::get('/nuevaCategoria', function () {
+    return view('admin/nueva_Categoria');
+});
+
+
+
+
+

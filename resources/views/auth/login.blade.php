@@ -1,11 +1,19 @@
 @extends('layouts.app')
 
+@section('TextoModif', 'Login')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="withBackground">
+                <br>
+                <div class="img-logo-circular">
+                    <img src="{{asset('assets/local/fulllogocircular.png')}}" class="center">
+                </div>
+                <br>
                 <div class="card-header">{{ __('Login') }}</div>
+                <br>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -52,13 +60,14 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn-login">
                                     {{ __('Login') }}
                                 </button>
+                                <br>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="forgot-pass" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif

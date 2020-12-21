@@ -1,13 +1,11 @@
-@extends('plantilla_perfiles')
+@extends('plantillas.plantilla_perfiles')
 @section('imagenPrincipal')
     {{asset('assets/local/foca.jpg')}}
 @endsection
 
-@section('campo_datos_1', 'DATO1')
 
-@section('campo_datos_2', 'DATO2')
+@section('campo_datos_2', 'NOMBRE')
 
-@section('campo_datos_3', 'DATO3')
 
 @section('campo_central', 'datos de contacto del owner')
 
@@ -18,33 +16,16 @@
         mENUDA GRANDIOSA DESCRIPCION
         mENUDA GRANDIOSA DESCRIPCION</p>
 @endsection
-
 @section('zonaExtra')
     <div class="row" >
         <div class="col-3" >
 
         </div>
         <div class="col-4 ">
-            <a href="{{url("/")}}" class="standard">Volver al innicio</a>
+            <a href="/" class="standard">Volver al innicio</a>
         </div>
-        <div class="col-4 ">
-            <a href="#" class="standard">Mis Servicios</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-4">
-
-        </div>
-        <div class="col-6 ">
-            <span ><a href="#" class="standard">Ver contenido multimedia</a></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3">
-
-        </div>
-        <div class="col-6 center">
-            <p>MI SALDO: SALDOUSER </p>
+        <div class="col-4 center">
+            <a href="#" class="standard">Sus Servicios</a>
         </div>
     </div>
 @endsection

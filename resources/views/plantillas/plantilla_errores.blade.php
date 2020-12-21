@@ -6,16 +6,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
-<nav>
-    @extends('nav')
-</nav>
+
+    @extends('footer-nav.nav')
+
+
 <section class="error">
 
     <div class="row">
 
         <div class="col-3">
             <h1>ERROR @yield('codigo_error')</h1>
-            <p> Disculp las molestias ocasionadas nuestros ingenieros estan en ello</p>
+            <p> Disculpe las molestias ocasionadas nuestros ingenieros estan trabajando en ello</p>
         </div>
 
         <div class="col-6">
@@ -32,7 +33,7 @@
 
         </div>
     </div>
-    @extends('footer')
+    @extends('footer-nav.footer')
 </section>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@extends('plantilla_formularios')
+@extends('plantillas.plantilla_formularios')
 
 @section('titulo')
 

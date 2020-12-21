@@ -6,9 +6,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
-<nav>
-    @extends('nav')
-</nav>
+
+    @extends('footer-nav.nav')
+    @section('TextoModif','Home')
+
 <section>
     <div class="row imageCenter">
 
@@ -98,6 +99,6 @@
         </div>
     </div>
 </section>
-@extends('footer')
+@include('footer-nav.footer')
 </body>
 </html>
