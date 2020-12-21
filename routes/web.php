@@ -20,7 +20,7 @@ Route::get('/perfil', function () {
     return view('personal_profile');
 });
 Route::get('/test', function () {
-    return view('cambiar_perfil');
+    return view('secciones_multiples');
 });
 /*Auth::routes();
 
