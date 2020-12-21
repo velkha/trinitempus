@@ -19,7 +19,7 @@
 
         <div class="col-3">
             <h1>ERROR @yield('codigo_error')</h1>
-            <p> Disculp las molestias ocasionadas nuestros ingenieros estan en ello</p>
+            <p> Disculpe las molestias ocasionadas nuestros ingenieros estan trabajando en ello</p>
         </div>
 
         <div class="col-6">

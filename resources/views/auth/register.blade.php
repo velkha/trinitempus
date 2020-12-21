@@ -5,8 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <br>
+                <div class="img-logo-circular">
+                    <img src="{{asset('assets/local/fulllogocircular.png')}}" class="center">
+                </div>
+                <br>
                 <div class="card-header">{{ __('Register') }}</div>
-
+                <br>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -58,6 +63,22 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="ciudad" class="col-md-4 col-form-label text-md-right">{{ __('Ciudad') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="ciudad" name="ciudad">
+                                    <option value="" selected="selected">
+                                        {{ __('---selecciona una ciudad---') }}
+                                    </option>
+                                    <option value="">Salamanca</option>
+                                    <option value="">Langa</option>
+                                    <option value="">Madrid</option>
+                                    <option value="">Barcelona</option>
+                                </select>
                             </div>
                         </div>
 

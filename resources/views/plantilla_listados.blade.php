@@ -28,8 +28,11 @@
                 </div>
             </div>
             <div class="row">
-                @section('tabla')
-                @show
+                <div class="col-12">
+                    @section('tabla')
+                    @show
+                </div>
+
             </div>
         </div>
     </div>

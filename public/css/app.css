@@ -295,6 +295,7 @@ footer .copyright {
     padding: 50px 0 40px;
     font-weight: 300;
 }
+
 /*
 
 ----------------------------------------------- Listados ------------------------------------------------
@@ -386,6 +387,39 @@ section.list_templates div table tr td{
     top:1px;
 }
 
+
+.col-md-6 button {
+    box-shadow:inset 0px 1px 0px 0px #fff6af;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color:#ffec64;
+    font-size:  15px;
+    border-radius:1em;
+    border:0.2em solid #000000;
+    display:inline-block;
+    cursor:pointer;
+    align-content: center;
+
+    font-family: Arial, serif;
+    font-weight:bold;
+    padding:1em 2em;
+    text-decoration:none;
+    text-shadow:0px 1px 0px white;
+    color: black;
+
+    width: 150px;
+    margin-left: 55%;
+}
+.col-md-6 button:hover {
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffbc47;
+}
+.col-md-6 button:active {
+    position:relative;
+    top:1px;
+}
+.forgot-pass {
+    font-size: 15px;
+}
 .standard {
     box-shadow: 0px 10px 14px -7px #276873;
     background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
@@ -412,6 +446,32 @@ section.list_templates div table tr td{
 
 /*
 
+<<<<<<< HEAD
+---------------------------------------------------------                 configuraciones login                   -------------------------------------------------------------------------------
+
+*/
+.py-4{
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 5%;
+    padding-left: 35%;
+}
+.card{
+    background-color: white;
+    color: black;
+    border-radius: 2em;
+}
+
+.card-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.col-md-6 input {
+    border-radius: 2em;
+}
+/*
 ---------------------------------------------------------               configuraciones de colores y textos   --------------------------------------------------------
 
 */
@@ -420,12 +480,29 @@ div.center *{
     margin: 0 auto;
     text-align: center
 }
-.withBackground{
+.withBackground {
     color: #f7fafc;
     background-color: #1a202c;
 
+
 }
 
+.form-check-label{
+    font-size: 15px;
+}
+
+.img-logo-circular img{
+    width: 100%;
+    max-width: 10em;
+    height: auto;
+    align-content: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
 /*
 
