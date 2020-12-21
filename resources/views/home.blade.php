@@ -6,10 +6,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
-<nav>
+
     @extends('nav')
     @section('TextoModif','Home')
-</nav>
+
 <section>
     <div class="row imageCenter">
 

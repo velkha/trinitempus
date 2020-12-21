@@ -4,9 +4,9 @@
 </head>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 <body>
-<nav>
+
     @extends('nav')
-</nav>
+
 <section class="list_templates">
     <div>
          <select name="filter" >
@@ -15,12 +15,8 @@
             <option >Categoria</option>
             <option >Fecha</option>
          </select>
-
-
             <input type="text" name="TextSearcher">
-
-
-        <input type="button" name="Search" value="Buscar">
+        <input type="button" name="Search" value="search">
     </div>
     <div>
         @section('tabla')
@@ -28,7 +24,7 @@
     </div>
 </section>
 
-@extends('footer')
 </body>
+@extends('footer')
 </html>
 

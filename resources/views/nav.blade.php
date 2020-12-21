@@ -1,4 +1,5 @@
-<section class="nav">
+<nav>
+
     <!-- Este div se encargará de mostrar el logo de la página y con el section mostraremos
     en que pagina estamos en cada momento-->
     <div>
@@ -10,7 +11,7 @@
 @if(!Auth::check())
     <div class="init">
         <p class="log">
-            <a href="{{url('/login')}}">Login or</a>
+            <a href="{{url('/login')}}">Login</a>
             <a href="{{url('/register')}}"> Register</a>
         </p>
     </div>
@@ -40,4 +41,5 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
         </ul>
     </div>
 @endif
-</section>
+
+</nav>

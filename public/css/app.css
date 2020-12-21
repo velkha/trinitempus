@@ -43,11 +43,7 @@ body{
 */
 
 nav{
-    background-image: url("../assets/local/amber.jpg");
-    background-color: #ffaa00;
-    background-size: 100% 100%;
-}
-section.nav,nav{
+    top: 0;
     border-radius: 2em;
     z-index: 100;
     position: fixed;
@@ -55,25 +51,28 @@ section.nav,nav{
     left: 10%;
     width: 80%;
     color: #ffffff;
+    background-image: url("../assets/local/amber.jpg");
+    background-color: #ffaa00;
+    background-size: 100% 100%;
 }
 
-section.nav div p{
+nav div p{
     left: 25%;
     top: 50%;
     position: fixed;
     font-size: 15px;
 }
 
-section.nav div img.photo{
-    top: 3%;
+nav div img.photo{
+    top: 5px;
     z-index: 1000;
     left: 12%;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     position: fixed;
 }
 
-section.nav div .profile{
+nav div .profile{
     position: fixed;
     z-index: 10;
     top: 20px;
@@ -82,64 +81,65 @@ section.nav div .profile{
     height: 50px;
 }
 
-section.nav div.init{
+nav div.init{
     border-radius: 2em;
     z-index: 2;
     position: fixed;
-    left: 75%;
-    top: 12%;
-    background-image: url("../assets/local/blue.jpg");;
+    left: 73%;
+    top: 56px;
+    background-image: url(../assets/local/blue.jpg);
     background-color: #ffaa00;
     background-size: 100% 100%;
-    width: 13%;
-    height: 2em;
+    width: 12%;
+    height: 40px;
 }
 
-section.nav div ul{
+nav div ul{
     position: fixed;
     width: auto;
     left: 35%;
     font-size: 14px;
-    top: 120px;
+    top: 80px;
 }
 
-section.nav div ul li{
+nav div ul li{
     list-style: none;
     display: inline;
     padding-left: 20px;
 }
 
-section.nav div>p{
+nav div>p{
     font-size: 30px;
     position: fixed;
-    top: 5%;
+    top: 5px;
     left: 40%;
 }
 
 
-section.nav div ul li.date{
+nav div ul li.date{
 
     display: block;
 
 }
 
-section.nav div p.log{
+nav div p.log{
     position: absolute;
-    top: -15%;
+    font-size: 20px;
+    top: -5px;
     left: 26%;
 }
-section.nav div ul.list{
+nav div ul.list{
     left: 75%;
     top: 85px;
 }
-section.nav ul+div{
+nav ul+div{
     position: fixed;
     background-color: transparent;
     background-image: none;
     top: 15%;
 }
 
-section.nav div p a{
+nav div p a{
 text-decoration: none;
     color: white;
     font-size: 12px;
@@ -267,6 +267,28 @@ footer .copyright {
     padding: 50px 0 40px;
     font-weight: 300;
 }
+
+footer .contact_us p {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+/* para los emoticonos
+
+.content-3 .glyphicon,	.page-footer .contact .glyphicon {
+	font-size: 32px;
+	font-weight: 700;
+	}
+*/
+
+footer .copyright {
+    margin-top: 1%;
+    border-radius: 2em;
+    border: black 2px solid;
+    padding: 50px 0 40px;
+    font-weight: 300;
+}
 /*
 
 ----------------------------------------------- Listados ------------------------------------------------
@@ -275,18 +297,22 @@ footer .copyright {
 section.list_templates{
     position: absolute;
     top: 30%;
+    width: 100%;
+    height: auto;
 }
 section.list_templates>div{
     position: absolute;
     top: 0;
     left: 50px;
+    width: 90%;
+    height: 50px;
 
 }
 section.list_templates div select{
     position: absolute;
     top: 30px;
     color: black;
-    left: 519px;
+    left: 150px;
 
 }
 section.list_templates div select option{
@@ -296,7 +322,7 @@ section.list_templates div select option{
 section.list_templates div select+input{
     position: absolute;
     top: 30px;
-    left: 600px;
+    left: 233px;
     width: 300px;
     color: black;
 }
@@ -304,12 +330,12 @@ section.list_templates div input+input{
     position: absolute;
     top: 30px;
     color: black;
-    left: 900px;
+    left: 533px;
 }
 section.list_templates div table{
     position: absolute;
     top: 90px;
-    left: 210px;
+    left: 10px;
 }
 section.list_templates div table tr td{
     color: black;
