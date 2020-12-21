@@ -7,7 +7,7 @@
 </head>
 <body>
 <nav>
-    @extends('nav')
+    @extends('footer-nav.nav')
 </nav>
 <section>
 

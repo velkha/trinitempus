@@ -6,7 +6,7 @@
 </head>
 <body>
 
-@extends('nav')
+@extends('footer-nav.nav')
 @section('TextoModif','Opciones de Admin')
 <section>
 <div class="row">
@@ -24,6 +24,6 @@
     </div>
 </div>
 </section>
-@include('footer')
+@include('footer-nav.footer')
 </body>
 </html>

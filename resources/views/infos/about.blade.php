@@ -1,4 +1,4 @@
-@extends('plantilla_info')
+@extends('plantillas.plantilla_info')
 @section('TextoModif','About Us')
 @section('texto')
 

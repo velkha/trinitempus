@@ -6,7 +6,7 @@
 </head>
 <body>
 
-@extends('nav')
+@extends('footer-nav.nav')
 @section('TextoModif','Nueva Categoria')
 <section>
     <div class="row">
@@ -42,7 +42,7 @@
     </div>
     </div>
 </section>
-@include('footer')
+@include('footer-nav.footer')
 
 </body>
 </html>

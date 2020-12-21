@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    @extends('nav')
+    @extends('footer-nav.nav')
 
 
 <section class="error">
@@ -33,7 +33,7 @@
 
         </div>
     </div>
-    @extends('footer')
+    @extends('footer-nav.footer')
 </section>
 </body>
 </html>

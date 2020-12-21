@@ -53,6 +53,6 @@
         <div class="col-3"></div>
     </div>
 </section>
-@extends('footer')
+@extends('footer-nav.footer')
 </body>
 </html>

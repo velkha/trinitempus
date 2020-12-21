@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 <body>
 
-    @include('nav')
+    @include('footer-nav.nav')
 
 <section>
     <div class="row">
@@ -38,7 +38,7 @@
     </div>
 
 </section>
-    @include('footer')
+    @include('footer-nav.footer')
 </body>
 
 </html>
