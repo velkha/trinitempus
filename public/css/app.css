@@ -160,6 +160,11 @@ p+img {
     max-width: 10em;
     height: auto;
 }
+input, select, textarea {
+    color: #f7fafc;
+    background-color: #1a202c;
+}
+
 
 /*
 
@@ -265,11 +270,7 @@ footer .copyright {
 ---------------------------------------------------------               botones & hipervinculos    --------------------------------------------------------
 
 */
-div.center *{
-    width: 50%;
-    margin: 0 auto;
-    text-align: center
-}
+
 
 .errorButton {
     box-shadow:inset 0px 1px 0px 0px #fff6af;
@@ -321,8 +322,21 @@ div.center *{
     top:1px;
 }
 
+/*
 
+---------------------------------------------------------               configuraciones de colores y textos   --------------------------------------------------------
 
+*/
+div.center *{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center
+}
+.withBackground{
+    color: #f7fafc;
+    background-color: #1a202c;
+
+}
 
 
 /*
