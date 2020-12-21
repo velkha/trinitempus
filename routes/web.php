@@ -24,12 +24,6 @@ Route::get('/test', function () {
     return view('secciones_multiples');
 });
 
-/*Auth::routes();*/
-
-
-Route::get('/lista', function () {
-    return view('listados/categorias');
-});
 
 Auth::routes();
 
@@ -38,6 +32,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
