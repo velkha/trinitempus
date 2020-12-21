@@ -1,5 +1,5 @@
 @extends('plantilla_info')
-@section('TextoModif','Contactanos')
+@section('TextoModif','Contáctanos')
 @section('texto')
     <p>
         Teléfono de contacto: +34 678 910 123

@@ -1,4 +1,4 @@
-@extends('plantilla_listados')
+@extends('plantillas.plantilla_listados')
 @section('TextoModif','Listado Ciudades')
 @section('tabla')
     <div class="row" id="lista_ciudades">
