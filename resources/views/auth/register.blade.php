@@ -61,6 +61,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="ciudad" class="col-md-4 col-form-label text-md-right">{{ __('Ciudad') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="ciudad" name="ciudad">
+                                    <option value="" selected="selected">
+                                        {{ __('---selecciona una ciudad---') }}
+                                    </option>
+                                    <option value="">Salamanca</option>
+                                    <option value="">Langa</option>
+                                    <option value="">Madrid</option>
+                                    <option value="">Barcelona</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
