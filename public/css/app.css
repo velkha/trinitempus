@@ -320,7 +320,6 @@ footer .copyright {
     top:1px;
 }
 
-<<<<<<< HEAD
 .col-md-6 button {
     box-shadow:inset 0px 1px 0px 0px #fff6af;
     background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
@@ -340,7 +339,7 @@ footer .copyright {
     color: black;
 
     width: 150px;
-    margin-left: 55%;
+    margin-left: 60%;
 }
 .col-md-6 button:hover {
     background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
@@ -350,9 +349,9 @@ footer .copyright {
     position:relative;
     top:1px;
 }
-.forgot-pass{
-    font-size:  15px;
-=======
+.forgot-pass {
+    font-size: 15px;
+}
 .standard {
     box-shadow: 0px 10px 14px -7px #276873;
     background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
@@ -375,7 +374,6 @@ footer .copyright {
 .standard:active {
     position:relative;
     top:1px;
->>>>>>> 7c90c3fd4f8402c968fefd645847f323a79c85b5
 }
 
 /*
@@ -390,11 +388,6 @@ footer .copyright {
     padding-bottom: 5%;
     padding-left: 35%;
 }
-.card{
-    background-color: white;
-    color: black;
-    border-radius: 2em;
-}
 
 .card-header{
     text-align: center;
@@ -402,9 +395,11 @@ footer .copyright {
     font-size: 30px;
 }
 
-.col-md-6 input{
+.col-md-6 input {
     border-radius: 2em;
-=======
+}
+
+/*
 ---------------------------------------------------------               configuraciones de colores y textos   --------------------------------------------------------
 
 */
@@ -416,8 +411,6 @@ div.center *{
 .withBackground{
     color: #f7fafc;
     background-color: #1a202c;
-
->>>>>>> 7c90c3fd4f8402c968fefd645847f323a79c85b5
 }
 
 .form-check-label{
