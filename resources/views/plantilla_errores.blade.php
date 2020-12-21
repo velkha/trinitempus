@@ -6,10 +6,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
+<nav>
+    @extends('nav')
+</nav>
 <section class="error">
-    @section('nav')
 
-     @show
     <div class="row">
 
         <div class="col-3">
@@ -31,9 +32,7 @@
 
         </div>
     </div>
-    @section('footer')
-
-    @show
+    @extends('footer')
 </section>
 </body>
 </html>
