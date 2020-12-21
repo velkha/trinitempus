@@ -31,9 +31,28 @@ Route::get('/contact',function () {
 Route::get('/about',function () {
     return view('infos/about');
 });
-
-
+Route::get('admin',function () {
+    return view('admin/opciones');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Rutas solo accesibles para los admins
+Route::get('/listaCiudad', function () {
+    return view('listados/ciudades');
+});
+Route::get('/listaCategoria', function () {
+    return view('listados/categorias');
+});
+Route::get('/listaUsuario', function () {
+    return view('listados/usuarios');
+});
+Route::get('/nuevaCiudad', function () {
+    return view('admin/nueva_ciudad');
+});
+Route::get('/nuevaCategoria', function () {
+    return view('admin/nueva_Categoria');
+});
+
 
 
 Route::get('/compra', function () {

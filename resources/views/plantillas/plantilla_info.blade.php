@@ -5,8 +5,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
+
 @include('footer-nav.nav')
-<section class="">
+<section>
+
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6 withBackground">
