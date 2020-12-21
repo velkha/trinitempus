@@ -1,3 +1,4 @@
+
 @extends('plantillas.plantilla_listados')
 @section('TextoModif','Listado Ciudades')
 @section('tabla')
@@ -8,15 +9,12 @@
         <div class="col-3">Borrar</div>
     </div>
 
-
-
-
     <div class="row">
         <div class="col-4"></div>
-        <div class="col-4"><button class="standard">Nueva Ciudad</button></div>
+        <div class="col-4"><button class="standard" role="link" onclick="window.location='/trinitempus/public/nuevaCiudad'">Nueva Ciudad</button></div>
         <div class="col-4"></div>
 
     </div>
 
-
 @endsection
+
