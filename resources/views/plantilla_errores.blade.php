@@ -8,6 +8,10 @@
 <body>
 <nav>
     @extends('nav')
+<<<<<<< HEAD
+
+=======
+>>>>>>> 58fe59e87909f46019bee5493342f8a6a6321d46
 </nav>
 <section class="error">
 
@@ -15,7 +19,7 @@
 
         <div class="col-3">
             <h1>ERROR @yield('codigo_error')</h1>
-            <p> Disculp las molestias ocasionadas nuestros ingenieros estan en ello</p>
+            <p> Disculpe las molestias ocasionadas nuestros ingenieros estan trabajando en ello</p>
         </div>
 
         <div class="col-6">

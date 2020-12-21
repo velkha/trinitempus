@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,20 @@ Route::get('/perfil', function () {
 Route::get('/test', function () {
     return view('secciones_multiples');
 });
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+=======
+Route::get('/lista', function () {
+    return view('listados/categorias');
+});
+Auth::routes();
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+>>>>>>> 25427818d89ae81e8b79f27ba150691f92d3bb5a
