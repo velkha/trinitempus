@@ -1,15 +1,10 @@
 @extends('plantilla_listados')
 @section('TextoModif','Listado Usuarios')
 @section('tabla')
-    <table>
-        <tr>
-            <td>UID</td>
-            <td>Nombre</td>
-            <td>Mail</td>
-            <td>Modificar</td>
-            <td>Borrar</td>
+    <div class="col-1">UID</div>
+    <div class="col-3">Nombre</div>
+    <div class="col-3">Mail</div>
+    <div class="col-3">Modificar</div>
+    <div class="col-2">Borrar</div>
 
-        </tr>
-
-    </table>
 @endsection

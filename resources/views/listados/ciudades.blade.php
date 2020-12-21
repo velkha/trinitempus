@@ -1,15 +1,19 @@
 @extends('plantilla_listados')
 @section('TextoModif','Listado Ciudades')
 @section('tabla')
-<table>
-    <tr>
-        <td>ID</td>
-        <td>Ciudad</td>
-        <td>Modificar</td>
-        <td>Borrar</td>
+    <div class="col-3">ID</div>
+    <div class="col-3">Ciudad</div>
+    <div class="col-3">Modificar</div>
+    <div class="col-3">Borrar</div>
 
-    </tr>
 
-</table>
+    <div class="row">
+        <div class="col-2"></div>
+
+        <div class="col-md-6"><button>Nueva Ciudad</button></div>
+        <div class="col-4"></div>
+
+    </div>
+
 
 @endsection

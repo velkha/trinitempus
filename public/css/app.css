@@ -162,10 +162,7 @@ section.error{
 section *{
     color: white;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 58fe59e87909f46019bee5493342f8a6a6321d46
 p+img {
     width: 100%;
     max-width: 10em;
@@ -322,25 +319,29 @@ background-color: white;
 section.list_templates>div.search{
     background-color: transparent;
 }
-section.list_templates div label select{
+section.list_templates div select{
     position: relative;
+    background-color: white;
     color: black;
     left: 238px;
 
 }
-section.list_templates div label select option{
+section.list_templates div select option{
     color: black;
+    background-color: white;
 }
 
-section.list_templates div label+label input{
+section.list_templates div select+input{
     position: relative;
     left: 233px;
+    background-color: white;
     width: 300px;
     color: black;
 }
-section.list_templates div label+input{
+section.list_templates div input+input{
     position: relative;
     color: black;
+    background-color: white;
     left: 227px;
 }
 section.list_templates div table{
