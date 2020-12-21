@@ -99,6 +99,6 @@
         </div>
     </div>
 </section>
-@extends('footer')
+@include('footer')
 </body>
 </html>

@@ -295,46 +295,47 @@ footer .copyright {
 
  */
 section.list_templates{
-    position: absolute;
-    top: 30%;
+    position: relative;
     width: 100%;
     height: auto;
+    padding-bottom: 35px;
 }
 section.list_templates>div{
-    position: absolute;
-    top: 0;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    top: 30px;
     left: 50px;
     width: 90%;
-    height: 50px;
-
+    height: auto;
+background-color: white;
 }
-section.list_templates div select{
-    position: absolute;
-    top: 30px;
+section.list_templates>div.search{
+    background-color: transparent;
+}
+section.list_templates div label select{
+    position: relative;
     color: black;
-    left: 150px;
+    left: 238px;
 
 }
-section.list_templates div select option{
+section.list_templates div label select option{
     color: black;
 }
 
-section.list_templates div select+input{
-    position: absolute;
-    top: 30px;
+section.list_templates div label+label input{
+    position: relative;
     left: 233px;
     width: 300px;
     color: black;
 }
-section.list_templates div input+input{
-    position: absolute;
-    top: 30px;
+section.list_templates div label+input{
+    position: relative;
     color: black;
-    left: 533px;
+    left: 227px;
 }
 section.list_templates div table{
-    position: absolute;
-    top: 90px;
+    position: relative;
     left: 10px;
 }
 section.list_templates div table tr td{
