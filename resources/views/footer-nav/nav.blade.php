@@ -25,7 +25,7 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
                 @if(admin)
                     <li><a href="{{url('/admin')}}">Administracion</a></li>
                 @endif
-                <li>servicios</li>
+                <li><a>servicios</a></li>
             @endif
             <li><a href="{{url('/contact')}}">Contact</a></li>
             <li><a href="{{url('/about')}}">About us</a></li>

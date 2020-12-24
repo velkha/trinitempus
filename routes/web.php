@@ -54,7 +54,7 @@ Route::get('/nuevaCategoria', function () {
 });
 
 
-
+//rutas de prueba
 Route::get('/compra', function () {
     return view('servicios/comprar_servicio');
 });
