@@ -403,7 +403,7 @@ section.list_templates div table tr td{
     border:0.2em solid #000000;
     display:inline-block;
     cursor:pointer;
-    align-content: center;
+    width: 150px;
 
     font-family: Arial, serif;
     font-weight:bold;
@@ -412,8 +412,7 @@ section.list_templates div table tr td{
     text-shadow:0px 1px 0px white;
     color: black;
 
-    width: 150px;
-    margin-left: 60%;
+
 }
 .col-md-6 button:hover {
     background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
@@ -458,20 +457,35 @@ section.list_templates div table tr td{
 */
 .py-4{
     position: relative;
-    padding-top: 15%;
+    padding-top: 5%;
     padding-bottom: 5%;
-    padding-left: 35%;
 }
 
 .card-header{
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2em;
+    text-decoration: underline;
 }
 
 .col-md-6 input {
     border-radius: 2em;
 }
+
+
+/*
+
+
+---------------------------------------------------------                 configuraciones vista comprar servivio                   -------------------------------------------------------------------------------
+
+*/
+
+div.divs-vista-servicios div{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
 
 /*
 ---------------------------------------------------------               configuraciones de colores y textos   --------------------------------------------------------

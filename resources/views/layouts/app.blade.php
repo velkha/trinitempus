@@ -22,11 +22,18 @@
 <body>
     <div id="app">
         @include('footer-nav.nav')
-
-        <div class="py-4">
-            @yield('content')
-        </div>
+        <section>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 withBackground">
+                    <div class="py-4">
+                        @yield('content')
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </section>
     </div>
 </body>
-@extends('footer-nav.footer')
+@include('footer-nav.footer')
 </html>
