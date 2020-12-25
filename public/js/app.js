@@ -31,28 +31,6 @@ function generateGallery(){
     }
 }
 
-function getArray (){
-
-    document.getElementById("test").innerHTML="hola";
-}
-function getArray (some){
-
-    document.getElementById("test1").innerHTML=some;
-}
-
-function generateList(arrayJson, nombre_lista){
-    var phpArray=arrayJson;
-    var div;
-    var auxDiv;
-    var content;
-    var sibling;
-    var colmnSize= 12/phpArray[0].lenght;
-    colmnSize= parseInt(colmnSize);
-    var test=document.getElementById("test").innerHTML=phpArray;
-
-
-}
-
 
 /*
 <figure class="gallery__item">
