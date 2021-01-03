@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function getPedidos()
+    {
+        return $this->hasManyThrough(Pedido::class, Servicio::class, 'uid_owner', 'id_servicio');
+    }
+
 }

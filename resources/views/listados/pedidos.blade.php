@@ -1,5 +1,5 @@
 @extends('plantillas.plantilla_listados')
-@section('TextoModif','Listado Pedidos')
+@section('TextoModif','Listado Pedido')
 @section('tabla')
     <div class="row" id="lista_pedidos">
         <div class="col-3">Nombre Pedido</div>

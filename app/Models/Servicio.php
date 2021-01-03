@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Servicios extends Model
+class Servicio extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'uid_owner',
         'nombre',
         'categoria',
         'subcategoria',
@@ -24,5 +25,10 @@ class Servicios extends Model
         'n_usos',
         'puntuacion',
         'id_comentarios_servicio',
+        'id_servicio'
     ];
+
+    public function getPedidos(){
+        return $this->hasMany(Pedido::class, 'id_servicio');
+    }
 }

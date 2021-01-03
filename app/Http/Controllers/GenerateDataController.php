@@ -63,10 +63,10 @@ class GenerateDataController extends Controller
                 break;
             case "pedidos":
                 for($i=0; $i<$ndatos; $i++){
-                    $array[i][0]="pedidos".i;
-                    $array[i][1]="pedidos".i;
-                    $array[i][2]="pedidos".i;
-                    $array[i][3]="pedidos".i;
+                    $array[i][0]="pedidos".$i;
+                    $array[i][1]="pedidos".$i;
+                    $array[i][2]="pedidos".$i;
+                    $array[i][3]="pedidos".$i;
                 }
                 break;
             default:

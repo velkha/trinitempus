@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Categorias extends Model
+class Comentario extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nombre',
-        'descripcion',
-        'categoria_id'
+        'tipo_comentario',
+        'id_padre',
+        'id_usuario',
+        'texto',
+        'privado',
     ];
 }
