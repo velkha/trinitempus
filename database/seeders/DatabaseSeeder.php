@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         //añadir el orden de los seeders para rellenar las tablas
         $this->call([
+            CategoriaSeeder::class,
+            CiudadSeeder::class,
+
+
             ServiciosSeeder::class
     ]);
     }

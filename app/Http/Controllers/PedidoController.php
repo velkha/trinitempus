@@ -29,10 +29,10 @@ class PedidoController extends Controller
     }
     public static function getPedidoByOwner($id){
         $pedidos= User::find($id)->getPedidos;
-        foreach ($pedidos as $pedido) {
-            echo '<br>';
-            echo $pedido;
-            echo '<br>';
-        }
+        /*foreach ($pedidos as $pedido) {
+            echo $pedido->uid_cliente;
+            echo $pedido->comentarios_pedido;
+        }*/
+        return $pedidos;
     }
 }

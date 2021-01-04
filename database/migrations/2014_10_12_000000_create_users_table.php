@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->Integer('id_ciudad');
-            $table->Integer('telefono');
+            $table->string('telefono');
             $table->text('about_me');
             $table->text('datos_contacto');
             $table->double('saldo');

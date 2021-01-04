@@ -2,18 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\Ciudad;
+use App\Models\Servicio;
+use App\Models\Subcategoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class CiudadFactory extends Factory
+class SubcategoriaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Ciudad::class;
+    protected $model = Subcategoria::class;
 
     /**
      * Define the model's default state.
@@ -23,9 +24,8 @@ class CiudadFactory extends Factory
     public function definition()
     {
         return [
-            'nombre'=>$this->faker->city,
-            'latitud'=>$this->faker->latitude."",
-            'longitud'=>$this->faker->longitude."",
-            ];
+            'nombre'=>$this->faker->company,
+            'descripcion'=>$this->faker->text,
+        ];
     }
 }

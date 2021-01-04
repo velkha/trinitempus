@@ -2,18 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\Ciudad;
+use App\Models\Categoria;
+use App\Models\Contenido_multimedia;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class CiudadFactory extends Factory
+class Contenido_multimediaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Ciudad::class;
+    protected $model = Contenido_multimedia::class;
 
     /**
      * Define the model's default state.
@@ -23,9 +23,7 @@ class CiudadFactory extends Factory
     public function definition()
     {
         return [
-            'nombre'=>$this->faker->city,
-            'latitud'=>$this->faker->latitude."",
-            'longitud'=>$this->faker->longitude."",
-            ];
+            'contenido'=>$this->faker->text(5),
+        ];
     }
 }

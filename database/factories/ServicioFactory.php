@@ -24,6 +24,7 @@ class ServicioFactory extends Factory
     {
         return [
             'nombre'=>$this->faker->jobTitle,
+            //la duracion la trabajamos en segundo
             'duracion'=>$this->faker->randomNumber(8, false),
             'descripcion'=>$this->faker->paragraph,
             'precio_decimal'=>$this->faker->randomFloat(2, 0, 5000),
