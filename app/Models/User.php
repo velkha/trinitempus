@@ -20,7 +20,16 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-
+        'id_ciudad',
+        'telefono',
+        'about_me',
+        'datos_contacto',
+        'saldo',
+        'id_foto_perfil',
+        'nivel_de_usuario',
+        //fk
+        'id_emisor',
+        'id_receptor'
     ];
 
     /**
@@ -43,9 +52,16 @@ class User extends Authenticatable
     ];
 
 
-    public function getPedidos()
-    {
+    public function getPedidos(){
         return $this->hasManyThrough(Pedido::class, Servicio::class, 'uid_owner', 'id_servicio');
     }
-
+    public function getMensajesEnviados(){
+        return $this->hasMany(Mensaje::class, 'id_emisor');
+    }
+    public function getMensajesRecibidos(){
+        return $this->hasMany(Mensaje::class, 'id_receptor');
+    }
+    public function getCiudad(){
+        return $this->belongsTo(Ciudad::class, 'id_ciudad');
+    }
 }

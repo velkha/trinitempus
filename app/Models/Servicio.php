@@ -25,10 +25,28 @@ class Servicio extends Model
         'n_usos',
         'puntuacion',
         'id_comentarios_servicio',
+        //fk
         'id_servicio'
     ];
 
     public function getPedidos(){
         return $this->hasMany(Pedido::class, 'id_servicio');
     }
+
+    public function getCategoria(){
+        return $this->belongsTo(Categoria::class, 'categoria');
+    }
+
+    public function getCiudad(){
+        return $this->belongsTo(Categoria::class, 'id_ciudad');
+    }
+
+    public function getSubCategoria(){
+        return $this->belongsTo(Subcategoria::class, 'subcategoria');
+    }
+
+    public function getFotoPrincipal(){
+        return $this->belongsTo(Contenido_multimedia::class, 'foto_principal');
+    }
+
 }

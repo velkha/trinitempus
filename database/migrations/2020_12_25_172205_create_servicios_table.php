@@ -19,16 +19,17 @@ class CreateServiciosTable extends Migration
             $table->string('nombre');
             $table->Integer('categoria');
             $table->Integer('subcategoria');
-            $table->string('duraccion');
+            //duracion del servicio en segundos OwO
+            $table->unsignedInteger('duraccion');
             $table->text('descripcion');
             $table->Integer('id_ciudad');
             $table->float('precio_decimal');
             $table->Integer('foto_principal');
             $table->string('id_contenidos_multimedia');
             $table->string('rango_fechas');
-            $table->Integer('public_state');
-            $table->Integer('ndenuncias');
-            $table->Integer('n_usos');
+            $table->unsignedTinyInteger('public_state');
+            $table->unsignedInteger('ndenuncias');
+            $table->unsignedInteger('n_usos');
             $table->float('puntuacion');
             $table->string('id_comentarios_servicio');
             $table->timestamps();

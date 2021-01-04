@@ -12,5 +12,15 @@ class Ciudad extends Model
         'nombre',
         'latitud',
         'longitud',
+        //fk
+        'id_ciudad'
     ];
+
+
+    public function getServicios(){
+        return $this->hasMany(Servicio::class, 'id_ciudad');
+    }
+    public function getUsuarios(){
+        return $this->hasMany(User::class, 'id_ciudad');
+    }
 }

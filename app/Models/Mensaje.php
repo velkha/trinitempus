@@ -16,4 +16,5 @@ class Mensaje extends Model
         'estado'
     ];
 
+
 }

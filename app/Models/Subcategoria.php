@@ -13,4 +13,10 @@ class Subcategoria extends Model
         'nombre',
         'descripcion',
     ];
+    public function getCategoriaPadre(){
+        return $this->belongsTo(Categoria::class, 'id_categoria_padre');
+    }
+    public function getServicio(){
+        return $this->hasMany(Servicio::class, 'subcategoria');
+    }
 }

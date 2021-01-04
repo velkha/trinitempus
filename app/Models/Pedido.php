@@ -19,4 +19,9 @@ class Pedido extends Model
     public function getServicio(){
         return $this->belongsTo(Servicio::class, 'id_servicio');
     }
+
+    public function get(){
+        return $this->belongsTo(Categoria::class, 'id_ciudad');
+    }
+
 }
