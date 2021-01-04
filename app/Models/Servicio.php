@@ -28,7 +28,9 @@ class Servicio extends Model
         //fk
         'id_servicio'
     ];
-
+    public function getOwner(){
+        return $this->belongsTo(User::class, 'uid_owner');
+    }
     public function getPedidos(){
         return $this->hasMany(Pedido::class, 'id_servicio');
     }

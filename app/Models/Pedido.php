@@ -20,8 +20,8 @@ class Pedido extends Model
         return $this->belongsTo(Servicio::class, 'id_servicio');
     }
 
-    public function get(){
-        return $this->belongsTo(Categoria::class, 'id_ciudad');
+    public function getCliente(){
+        return $this->belongsTo(User::class, 'uid_cliente');
     }
 
 }

@@ -11,5 +11,13 @@ class Categoria extends Model
     protected $fillable = [
         'nombre',
         'descripcion',
+        //fk
+        'id_categoria_padre'
     ];
+    public function getServicio(){
+        return $this->hasMany(Servicio::class, 'categoria');
+    }
+    public function getSubcategorias(){
+        return $this->hasMany(Subcategoria::class, 'id_categoria_padre');;
+    }
 }
