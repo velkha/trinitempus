@@ -14,8 +14,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $servicios = Servicio::all();
-        return $servicios;
+        //
     }
 
     /**
@@ -47,7 +46,6 @@ class ServiceController extends Controller
         puntuacion
         id_comentarios_servicio
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -103,7 +101,24 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        $servicio= Servicio::find($id)->get();
+        $servicio->uid_owner = $request->uid_owner;
+        $servicio->nombre = $request->nombre;
+        $servicio->categoria = $request->categoria;
+        $servicio->subcategoria = $request->subcategoria;
+        $servicio->duracion = $request->duracion;
+        $servicio->descripcion = $request->descripcion;
+        $servicio->id_ciudad = $request->id_ciudad;
+        $servicio->precio_decimal = $request->precio_decimal;
+        $servicio->foto_principal = $request->foto_principal;
+        $servicio->id_contenidos_multimedia = $request->id_contenidos_multimedia;
+        $servicio->rango_fechas = $request->rango_fechas;
+        $servicio->public_state = $request->public_state;
+        $servicio->ndenuncias = $request->ndenuncias;
+        $servicio->n_usos = $request->n_usos;
+        $servicio->puntuacion = $request->puntuacion;
+        $servicio->id_comentarios_servicio = $request->id_comentarios_servicio;
+        $servicio->save();
     }
     /**
      * Remove the specified resource from storage.
@@ -115,6 +130,10 @@ class ServiceController extends Controller
     {
 
     }
+    public static function getAllServicios(){
+        $servicios = Servicio::all();
+        return $servicios;
+    }
     public static function getServiceByUserId($id){
         $servicios= Servicio::where('uid_owner', $id)->get();
         return $servicios;
@@ -124,11 +143,11 @@ class ServiceController extends Controller
         return $servicios;
     }
     public static function addNewComentario($idServicio, $idComentario){
-        $servicio= Servicio::find($idServicio);
+        $servicio= Servicio::find($idServicio)->get();
         $servicio->id_comentarios_servicio=$servicio->id_comentarios_servicio.$idComentario.";";
     }
     public static function addNewContenidoMultimedia($idServicio, $idContenido){
-        $servicio= Servicio::find($idServicio);
+        $servicio= Servicio::find($idServicio)->get();
         $servicio->id_contenidos_multimedia=$servicio->id_comentarios_servicio.$idContenido.";";
     }
 }

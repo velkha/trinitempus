@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -34,7 +35,10 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $categoria= new Categoria;
+        $categoria->nombre=$request->nombre;
+        $categoria->descripcion=$request->descripcion;
+        $categoria->save();
     }
 
     /**
@@ -45,7 +49,8 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        //
+        $categoria= Categoria::find($id);
+        return $categoria;
     }
 
     /**
@@ -61,14 +66,19 @@ class CategoriaController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
+     *'nombre',
+    'descripcion',
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $categoria= Categoria::find($id);
+        $categoria->nombre=$request->nombre;
+        $categoria->descripcion=$request->descripcion;
+        $categoria->save();
+
     }
 
     /**
@@ -80,5 +90,9 @@ class CategoriaController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public static function getAllCategorias(){
+        $categorias = Categoria::all();
+        return $categorias;
     }
 }

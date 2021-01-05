@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subcategoria;
 use Illuminate\Http\Request;
 
 class SubcategoriaController extends Controller
@@ -34,7 +35,11 @@ class SubcategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $subcategoria= new Subcategoria;
+        $subcategoria->id_categoria_padre=$request->id_categoria_padre;
+        $subcategoria->nombre=$request->nombre;
+        $subcategoria->descripcion=$request->descripcion;
+        $subcategoria->save();
     }
 
     /**
@@ -45,7 +50,8 @@ class SubcategoriaController extends Controller
      */
     public function show($id)
     {
-        //
+        $categoria= Subcategoria::find($id);
+        return $categoria;
     }
 
     /**
@@ -61,14 +67,19 @@ class SubcategoriaController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
+     *'nombre',
+    'descripcion',
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $categoria= Subcategoria::find($id);
+        $categoria->nombre=$request->nombre;
+        $categoria->descripcion=$request->descripcion;
+        $categoria->save();
+
     }
 
     /**
@@ -81,4 +92,9 @@ class SubcategoriaController extends Controller
     {
         //
     }
+    public static function getAllCategorias(){
+        $categorias = Subcategoria::all();
+        return $categorias;
+    }
 }
+
