@@ -33,8 +33,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6 gallery">
+                <div class="gallery">
                     <figure class="gallery__item">
                         <img  alt="img1" class="gallery__img">
                         <p class="img__description">lo lolololo lo</p>
@@ -72,10 +71,8 @@
                         <p class="img__description">lo lolololo lo</p>
                     </figure>
                 </div>
-                <div class="col-3"></div>
             </div>
         </div>
-        <div class="col-3"></div>
     </div>
 </section>
 @include('footer-nav.footer')
