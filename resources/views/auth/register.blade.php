@@ -68,13 +68,9 @@
 
         <div class="col-md-6">
             <select id="ciudad" name="ciudad">
-                <option value="" selected="selected">
-                    {{ __('---selecciona una ciudad---') }}
-                </option>
-                <option value="">Salamanca</option>
-                <option value="">Langa</option>
-                <option value="">Madrid</option>
-                <option value="">Barcelona</option>
+            @foreach(\App\Models\Ciudad::all() as $ciudad)
+                <option value="{{$ciudad->id}}">{{$ciudad->nombre}}</option>
+            @endforeach
             </select>
         </div>
     </div>

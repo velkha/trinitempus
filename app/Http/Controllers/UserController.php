@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ciudad;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class CiudadController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -83,9 +83,5 @@ class CiudadController extends Controller
         //
     }
 
-    public function getAllCiudades(){
-        $ciudades = Ciudad::all();
-        return $ciudades;
-    }
 
 }

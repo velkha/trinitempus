@@ -22,7 +22,8 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
         <ul>
 
             @if(Auth::check())
-                @if(false/*admin*/)
+
+                @if(Auth::user()->isAdmin())
                     <li><a href="{{url('/admin')}}">Administracion</a></li>
                 @endif
                 <li><a>servicios</a></li>

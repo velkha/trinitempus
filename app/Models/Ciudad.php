@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ciudad extends Model
 {
     use HasFactory;
+    protected $table = "ciudades";
     protected $fillable = [
         'nombre',
         'latitud',
@@ -15,7 +16,6 @@ class Ciudad extends Model
         //fk
         'id_ciudad'
     ];
-
 
     public function getServicios(){
         return $this->hasMany(Servicio::class, 'id_ciudad');

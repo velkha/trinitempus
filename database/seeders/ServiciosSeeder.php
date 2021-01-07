@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Ciudad;
+use App\Models\Servicio;
 use Illuminate\Database\Seeder;
 
 class ServiciosSeeder extends Seeder
@@ -15,6 +16,7 @@ class ServiciosSeeder extends Seeder
     public function run()
     {
         Servicio::factory()
+
             //for para cuando tienes relaciones con keys foraneas
             ->for(Ciudad::all()
                 ->random())
