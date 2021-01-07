@@ -20,12 +20,12 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->Integer('id_ciudad');
-            $table->string('telefono');
-            $table->text('about_me');
-            $table->text('datos_contacto');
-            $table->double('saldo');
-            $table->Integer('id_foto_perfil');
-            $table->Integer('nivel_de_usuario');
+            $table->string('telefono')->nullable();
+            $table->text('about_me')->nullable();
+            $table->text('datos_contacto')->nullable();
+            $table->double('saldo')->default(0);
+            $table->Integer('id_foto_perfil')->nullable();
+            $table->Integer('nivel_de_usuario')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

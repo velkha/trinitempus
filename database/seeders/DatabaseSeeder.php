@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             CiudadSeeder::class,
 
 
-            ServiciosSeeder::class
+            //ServiciosSeeder::class
     ]);
     }
 }

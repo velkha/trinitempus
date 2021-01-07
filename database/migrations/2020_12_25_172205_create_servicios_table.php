@@ -20,7 +20,7 @@ class CreateServiciosTable extends Migration
             $table->Integer('categoria');
             $table->Integer('subcategoria');
             //duracion del servicio en segundos OwO
-            $table->unsignedInteger('duraccion');
+            $table->unsignedInteger('duracion');
             $table->text('descripcion');
             $table->Integer('id_ciudad');
             $table->float('precio_decimal');

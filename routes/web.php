@@ -26,6 +26,7 @@ Route::get('/test', function () {
 });
 Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
+
 Auth::routes();
 
 Route::get('/contact',function () {

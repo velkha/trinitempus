@@ -26,6 +26,7 @@ class User extends Authenticatable
         'datos_contacto',
         'saldo',
         'id_foto_perfil',
+        /* 0- Error 1-Confirmado 9- Admin*/
         'nivel_de_usuario',
         //fk
         'id_usuario',
@@ -74,5 +75,13 @@ class User extends Authenticatable
     }
     public function getCompras(){
         return $this->hasMany(Pedido::class, 'uid_cliente');
+    }
+    /**
+     * Retorna true si el usuario correspondiente a la id es admin, false si no
+     *
+     */
+    public function isAdmin(){
+        $nivel = $this->nivel_de_usuario;
+        return $nivel==9;
     }
 }
