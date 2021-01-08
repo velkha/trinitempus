@@ -13,6 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        //añadir el orden de los seeders para rellenar las tablas
+        $this->call([
+
+            CategoriaSeeder::class,
+            SubcategoriaSeeder::class,
+            CiudadSeeder::class,
+
+
+            //ServiciosSeeder::class
+    ]);
     }
 }

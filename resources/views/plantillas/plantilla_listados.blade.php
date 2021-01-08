@@ -8,7 +8,6 @@
 </script>
 
 <body>
-    @include('nav')
     @include('footer-nav.nav')
 
 <section>

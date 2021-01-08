@@ -57,16 +57,16 @@ class GenerateDataController extends Controller
                     $array[$i][1]="categorias".$i;
                     $array[$i][2]="categorias".$i;
                     $array[$i][3]="categorias".$i;
-                    $array[$i][4]="categorias".$i;
-                    $array[$i][5]="categorias".$i;
+                    $array[$i][4]="modificar";
+                    $array[$i][5]="borrar";
                 }
                 break;
             case "pedidos":
                 for($i=0; $i<$ndatos; $i++){
-                    $array[i][0]="pedidos".i;
-                    $array[i][1]="pedidos".i;
-                    $array[i][2]="pedidos".i;
-                    $array[i][3]="pedidos".i;
+                    $array[i][0]="pedidos".$i;
+                    $array[i][1]="pedidos".$i;
+                    $array[i][2]="pedidos".$i;
+                    $array[i][3]="pedidos".$i;
                 }
                 break;
             default:

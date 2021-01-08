@@ -21,8 +21,11 @@ Route::get('/perfil', function () {
     return view('personal_profile');
 });
 Route::get('/test', function () {
-    return view('listados/categorias');
+    return view('servicios_listado');
 });
+Route::get('/testController/{id}', [App\Http\Controllers\PedidoController::class,'getPedidoByOwner'])
+    ->name('servicebyid');
+
 Auth::routes();
 
 Route::get('/contact',function () {
@@ -54,6 +57,10 @@ Route::get('/nuevaCategoria', function () {
 });
 
 
+//rutas de prueba
+Route::get('/compra', function () {
+    return view('servicios/comprar_servicio');
+});
 
 
 
