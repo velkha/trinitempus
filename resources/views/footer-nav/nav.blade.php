@@ -38,7 +38,14 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
             <img src="{{asset('assets/local/logo.png')}}" class="profile" />
             <ul class="list">
                 <li class="date">Saldo actual</li>
-                <li class="date"><a href="{{ route('logout') }}">log out</a></li>
+                <li class="date">
+                    <!-- Form del logout con el token csrf por seguridad y verificacion
+                      -->
+                    <form action="{{ route('logout') }}" method="post">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btnCamufladosb">logout</button>
+                    </form>
+                </li>
 
             </ul>
         </div>

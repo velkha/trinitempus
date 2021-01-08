@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Categoria;
 use App\Models\Servicio;
 use App\Models\Subcategoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -26,6 +27,7 @@ class SubcategoriaFactory extends Factory
         return [
             'nombre'=>$this->faker->company,
             'descripcion'=>$this->faker->text,
+            'id_categoria_padre'=>$this->faker->randomElement(Categoria::all())
         ];
     }
 }
