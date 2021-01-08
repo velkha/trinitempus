@@ -43,7 +43,7 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
                       -->
                     <form action="{{ route('logout') }}" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="submit" class="btnCamufladosb">logout</button>
+                        <button type="submit" class="btnCamuflados">logout</button>
                     </form>
                 </li>
 
