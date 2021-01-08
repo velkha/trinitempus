@@ -1,3 +1,4 @@
+@if( Auth::check() && Auth::user()->isAdmin())
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,3 +47,9 @@
 
 </body>
 </html>
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

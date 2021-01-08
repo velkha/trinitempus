@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+@if( Auth::check() && Auth::user()->isAdmin())
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -27,3 +28,9 @@
 @include('footer-nav.footer')
 </body>
 </html>
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

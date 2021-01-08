@@ -37,8 +37,8 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
         <div >
             <img src="{{asset('assets/local/logo.png')}}" class="profile" />
             <ul class="list">
-                <li class="date">Saldo actual</li>
-                <li class="date"><a href="{{ route('logout') }}">log out</a></li>
+                <li class="date">Saldo actual: {{Auth::user()->saldo}}</li>
+                <li class="date"><a href="{{ route('logout') }}" methods="post">log out</a></li>
 
             </ul>
         </div>
