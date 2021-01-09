@@ -366,6 +366,18 @@ section.list_templates div table tr td{
 */
 
 
+button.btnCamuflado {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .errorButton {
     box-shadow:inset 0px 1px 0px 0px #fff6af;
     background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
