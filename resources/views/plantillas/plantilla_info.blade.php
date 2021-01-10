@@ -41,9 +41,6 @@
 
 </section>
 
-
-
-
 @include('footer-nav.footer')
 </body>
 </html>
