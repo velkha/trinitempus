@@ -20,8 +20,8 @@ Route::get('/', function () {
 Route::get('/perfil', function () {
     return view('personal_profile');
 });
-Route::get('/test', function () {
-    return view('servicios_listado');
+Route::get('/servicios', function () {
+    return view('servicios/servicios_listado');
 });
 Route::get('/testController/{id}', [App\Http\Controllers\PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
@@ -54,12 +54,6 @@ Route::get('/nuevaCiudad', function () {
 });
 Route::get('/nuevaCategoria', function () {
     return view('admin/nueva_Categoria');
-});
-
-
-//rutas de prueba
-Route::get('/compra', function () {
-    return view('servicios/comprar_servicio');
 });
 
 
