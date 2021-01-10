@@ -35,7 +35,7 @@ Route::get('/contact',function () {
 Route::get('/about',function () {
     return view('infos/about');
 });
-Route::get('admin',function () {
+Route::get('/admin',function () {
     return view('admin/opciones');
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');
