@@ -1,4 +1,5 @@
 @extends('plantillas.plantilla_perfiles')
+@section('TextoModif','Mi Perfil')
 @section('imagenPrincipal')
     {{asset('assets/local/foca.jpg')}}
 @endsection

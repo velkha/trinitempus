@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/perfil', function () {
-    return view('personal_profile');
+    return view('perfiles/personal_profile');
 });
 Route::get('/servicios', function () {
     return view('servicios/servicios_listado');

@@ -6,9 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
 </head>
 <body>
-<nav>
-
-</nav>
+@extends('footer-nav.nav')
 <section>
     <div class="row">
 
