@@ -21,7 +21,7 @@ Route::get('/perfil', function () {
     return view('personal_profile');
 });
 Route::get('/servicios', function () {
-    return view('servicios_listado');
+    return view('servicios/servicios_listado');
 });
 Route::get('/testController/{id}', [App\Http\Controllers\PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
