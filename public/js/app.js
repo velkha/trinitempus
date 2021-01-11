@@ -1,5 +1,5 @@
 
-window.onload=generateGallery;
+/*window.onload=generateGallery;
 
 var actualGalleryPage=1;
 function generateGallery(){
@@ -29,7 +29,7 @@ function generateGallery(){
         actualGalleryPage++;
 
     }
-}
+}*/
 
 
 /*

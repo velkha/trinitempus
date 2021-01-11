@@ -19,7 +19,7 @@ class CreateServiciosTable extends Migration
             $table->string('nombre');
             $table->Integer('categoria')->nullable();
             $table->Integer('subcategoria')->nullable();
-            //duracion del servicio en segundos OwO
+            //duracion del servicio en segundos
             $table->unsignedInteger('duracion');
             $table->text('descripcion')->nullable();
             $table->Integer('id_ciudad');

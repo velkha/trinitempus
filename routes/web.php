@@ -21,13 +21,17 @@ Route::get('/', function () {
 Route::get('/perfil', function () {
     return view('perfiles/personal_profile');
 });
-Route::get('/servicios', function () {
-    return view('servicios/servicios_listado');
-});
 Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
 
 Auth::routes();
+Route::get('/servicios', function () {
+    return view('servicios/servicios_listado');
+});
+Route::get('/servicio/{id}', function ($id) {
+    $data = \App\Http\Controllers\ServiceController::show($id);
+    return view('servicios/mostrar_servicio', ['data' => $data]);
+});
 
 Route::get('/contact',function () {
     return view('infos/contact');

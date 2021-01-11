@@ -17,8 +17,17 @@
 
     <div class="row">
         <div class="col-3"></div>
-        <div class="col-6 gallery" id="section_gallery">
+        <div class="col-6 gallery">
+            @foreach(\App\Models\Servicio::all() as $servicio)
+                <a href="{{url("servicio/".$servicio->id)}}">
+                    <figure class="gallery__item">
 
+                        <img  alt="img1" class="gallery__img">
+                        <p class="img__description">{{$servicio->descripcion}}</p>
+
+                    </figure>
+                </a>
+            @endforeach
         </div>
     </div>
 </section>

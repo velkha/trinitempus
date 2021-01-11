@@ -75,9 +75,10 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public static function show($id)
     {
-        $servicios= Servicio::find($id)->get();
+        $servicios= Servicio::find($id);
+
         return $servicios;
     }
 
@@ -101,7 +102,7 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $servicio= Servicio::find($id)->get();
+        $servicio= Servicio::find($id);
         $servicio->uid_owner = $request->uid_owner;
         $servicio->nombre = $request->nombre;
         $servicio->categoria = $request->categoria;

@@ -3,21 +3,16 @@
 @section('imagenPrincipal')
     {{asset('assets/local/foca.jpg')}}
 @endsection
+@section('campo_datos_1', $data->nombre)
 
-@section('campo_datos_1', 'DATO1')
+@section('campo_datos_2', $data->duracion)
 
-@section('campo_datos_2', 'DATO2')
+@section('campo_datos_3', $data->precio_decimal.' tempus')
 
-@section('campo_datos_3', 'DATO3')
-
-@section('campo_central', 'datos de contacto del owner')
+@section('campo_central', $data->rango_fechas)
 
 @section('descripcion')
-    <p>mENUDA GRANDIOSA DESCRIPCION mENUDA GRANDIOSA DESCRIPCION mENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCION mENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCION</p>
+    <p>{{$data->descripcion}}</p>
 @endsection
 
 @section('zonaExtra')
@@ -38,33 +33,23 @@
     </div>
     <div class="row">
         <div class="col-12">
+
             <p>SECCION DE COMENTARIOS</p>
-            <div class="row withBackground">
-                <div class="col-3">
-                    <img src="{{asset('assets/local/foca.jpg')}}" class="imageCenter" alt="Imagen con referencia al contenido de la seccion  ">
-                </div>
-                <div class="col-9">
-                    <h2>Nombre usuario</h2>
-                    <p>Contenido comentarioooooo</p>
-                    <p>Contenido comentarioooooo</p>
-                    <p>Contenido comentarioooooo</p>
-                    <p>Contenido comentarioooooo</p>
+            @foreach(\App\Http\Controllers\ComentarioController::getComentariosFromServicio($data->id) as $comentario)
+                <div class="row withBackground">
+                    <div class="col-3">
+                        <img src="{{asset('assets/local/foca.jpg')}}" class="imageCenter" alt="Imagen con referencia al contenido de la seccion  ">
+                    </div>
+                    <div class="col-9">
+                        <h2>{{$comentario->getUsuario->name}}</h2>
+                        <p>
+                            {{$comentario->texto}}
+                        </p>
 
+                    </div>
                 </div>
-            </div>
-            <div class="row withBackground">
-                <div class="col-3">
-                    <img src="{{asset('assets/local/foca.jpg')}}" class="imageCenter" alt="Imagen con referencia al contenido de la seccion  ">
-                </div>
-                <div class="col-9">
-                    <h2>Nombre usuario</h2>
-                    <p>Contenido comentarioooooo</p>
-                    <p>Contenido comentarioooooo</p>
-                    <p>Contenido comentarioooooo</p>
-                    <p>Contenido comentarioooooo</p>
+            @endforeach
 
-                </div>
-            </div>
         </div>
     </div>
 @endsection
