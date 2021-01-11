@@ -30,7 +30,13 @@ class PedidoFactory extends Factory
             'uid_cliente'=>$this->faker->randomElement(User::all()),
             'contenido_multimedia_pedido'=>"{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};",
             'comentarios_pedido'=>"{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};",
-
+            // 0 - Falta Confirmar
+            // 1 - Confirmado
+            // 2 - En Progreso
+            // 3 - Completado
+            // 4 - Error
+            // 9 - Test
+            'estado'=>9
         ];
 
     }

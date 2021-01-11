@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Servicio;
+use App\Models\Pedido;
 use Illuminate\Database\Seeder;
 
 class PedidosSeeder extends Seeder
@@ -14,7 +14,7 @@ class PedidosSeeder extends Seeder
      */
     public function run()
     {
-        Servicio::factory()
+        Pedido::factory()
             ->times(100)
             ->create();
     }
