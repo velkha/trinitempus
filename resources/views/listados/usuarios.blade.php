@@ -1,4 +1,4 @@
-
+@if( Auth::check() && Auth::user()->isAdmin())
 @extends('plantillas.plantilla_listados')
 @section('TextoModif','Listado Usuarios')
 @section('tabla')
@@ -10,4 +10,9 @@
         <div class="col-2">Borrar</div>
     </div>
 @endsection
-
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

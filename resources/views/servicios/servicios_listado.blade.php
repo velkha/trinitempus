@@ -10,7 +10,8 @@
 </head>
 <body>
 <nav>
-    @include('footer-nav.nav')
+    @extends('footer-nav.nav')
+    @section('TextoModif','Servicios')
 </nav>
 <section>
 

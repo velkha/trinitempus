@@ -37,7 +37,8 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
         <div >
             <img src="{{asset('assets/local/logo.png')}}" class="profile" />
             <ul class="list">
-                <li class="date">Saldo actual</li>
+
+                <li class="date">Saldo actual:</li>
                 <li class="date">
                     <!-- Form del logout con el token csrf por seguridad y verificacion
                       -->
@@ -46,6 +47,7 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
                         <button type="submit" class="btnCamuflado">logout</button>
                     </form>
                 </li>
+
 
             </ul>
         </div>
