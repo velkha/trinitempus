@@ -1,3 +1,4 @@
+@if( Auth::check())
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,3 +55,9 @@
 @extends('footer-nav.footer')
 </body>
 </html>
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif
