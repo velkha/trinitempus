@@ -16,7 +16,7 @@ class ServiciosSeeder extends Seeder
     public function run()
     {
         Servicio::factory()
-
+        /* En deshuso, se utilizan random element en los factory
             //for para cuando tienes relaciones con keys foraneas
             ->for(Ciudad::all()
                 ->random())
@@ -28,7 +28,7 @@ class ServiciosSeeder extends Seeder
              * el
                 ->has(Categoria::factory()
                 ->create();
-             */
+        */
             ->times(30)
             ->create();
     }

@@ -5,6 +5,8 @@ namespace Database\Factories;
 use App\Models\Categoria;
 use App\Models\Comentario;
 use App\Models\Pedido;
+use App\Models\Servicio;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PedidoFactory extends Factory
@@ -24,8 +26,11 @@ class PedidoFactory extends Factory
     public function definition()
     {
         return [
+            'id_servicio'=>$this->faker->randomElement(Servicio::all()),
+            'uid_cliente'=>$this->faker->randomElement(User::all()),
             'contenido_multimedia_pedido'=>"{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};",
             'comentarios_pedido'=>"{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};{$this->faker->randomNumber(1)};",
+
         ];
 
     }

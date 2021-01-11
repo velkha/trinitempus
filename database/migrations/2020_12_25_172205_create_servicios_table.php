@@ -17,21 +17,21 @@ class CreateServiciosTable extends Migration
             $table->id();
             $table->Integer('uid_owner');
             $table->string('nombre');
-            $table->Integer('categoria');
-            $table->Integer('subcategoria');
+            $table->Integer('categoria')->nullable();
+            $table->Integer('subcategoria')->nullable();
             //duracion del servicio en segundos OwO
             $table->unsignedInteger('duracion');
-            $table->text('descripcion');
+            $table->text('descripcion')->nullable();
             $table->Integer('id_ciudad');
             $table->float('precio_decimal');
-            $table->Integer('foto_principal');
-            $table->string('id_contenidos_multimedia');
+            $table->Integer('foto_principal')->nullable();
+            $table->string('id_contenidos_multimedia')->nullable();
             $table->string('rango_fechas');
             $table->unsignedTinyInteger('public_state');
-            $table->unsignedInteger('ndenuncias');
-            $table->unsignedInteger('n_usos');
-            $table->float('puntuacion');
-            $table->string('id_comentarios_servicio');
+            $table->unsignedInteger('ndenuncias')->nullable();
+            $table->unsignedInteger('n_usos')->nullable();
+            $table->float('puntuacion')->nullable();
+            $table->string('id_comentarios_servicio')->nullable();
             $table->timestamps();
         });
     }

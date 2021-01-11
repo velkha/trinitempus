@@ -18,7 +18,7 @@ class CreateMensajesTable extends Migration
             $table->Integer('id_emisor');
             $table->Integer('id_receptor');
             $table->text('mensaje');
-            $table->Integer('id_contenido_multimedia');
+            $table->Integer('id_contenido_multimedia')->nullable();
             $table->Integer('estado');
             $table->timestamps();
         });
