@@ -6,7 +6,7 @@ use App\Models\Contenido_multimedia;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class ContenidoMultimediaSeeder extends Seeder
+class Contenido_multimediaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +15,8 @@ class ContenidoMultimediaSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i<5;$i++){
-            //Contenido_multimedia::factory()->for(User::all()->random)->times(5)->create;
-        }
+        Contenido_multimedia::factory()
+            ->times(100)
+            ->create();
     }
 }

@@ -13,7 +13,13 @@ class Pedido extends Model
         'uid_cliente',
         'contenido_multimedia_pedido',
         'comentarios_pedido',
-
+        // 0 - Falta Confirmar
+        // 1 - Confirmado
+        // 2 - En Progreso
+        // 3 - Completado
+        // 4 - Error
+        // 9 - Test
+        'estado'
     ];
 
     public function getServicio(){

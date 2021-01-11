@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Categoria;
 use App\Models\Contenido_multimedia;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class Contenido_multimediaFactory extends Factory
@@ -23,7 +24,8 @@ class Contenido_multimediaFactory extends Factory
     public function definition()
     {
         return [
-            'contenido'=>$this->faker->text(5),
+            'uid_owner'=>$this->faker->randomElement(User::all()),
+            'contenido'=>asset("assets/local/foca.jpg"),
         ];
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Subcategoria;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,9 +21,13 @@ class DatabaseSeeder extends Seeder
             CategoriaSeeder::class,
             SubcategoriaSeeder::class,
             CiudadSeeder::class,
-
-
-            //ServiciosSeeder::class
+            UserSeeder::class,
+            MensajesSeeder::class,
+            ServiciosSeeder::class,
+            PedidosSeeder::class,
+            MensajesSeeder::class,
+            Contenido_multimediaSeeder::class,
+            ComentariosSeeder::class
     ]);
     }
 }

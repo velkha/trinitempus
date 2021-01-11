@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Categoria;
 use App\Models\Comentario;
 use App\Models\Mensaje;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class MensajeFactory extends Factory
@@ -23,8 +24,13 @@ class MensajeFactory extends Factory
      */
     public function definition()
     {
+        $id_emisor=$this->faker->randomElement(User::all());
+        do{
+            $id_receptor=$this->faker->randomElement(User::all());
+        }while($id_emisor==$id_receptor);
         return [
-
+            'id_emisor'=>$id_emisor,
+            'id_receptor'=>$id_receptor,
             'mensaje'=>$this->faker->text,
             /*
              * 0-No Enviado

@@ -1,4 +1,4 @@
-
+@if( Auth::check() && Auth::user()->isAdmin())
 @extends('plantillas.plantilla_listados')
 @section('TextoModif','Listado Ciudades')
 @section('tabla')
@@ -17,4 +17,9 @@
     </div>
 
 @endsection
-
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

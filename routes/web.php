@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PedidoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,12 +19,12 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/perfil', function () {
-    return view('personal_profile');
+    return view('perfiles/personal_profile');
 });
 Route::get('/servicios', function () {
-    return view('servicios_listado');
+    return view('servicios/servicios_listado');
 });
-Route::get('/testController/{id}', [App\Http\Controllers\PedidoController::class,'getPedidoByOwner'])
+Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
 
 Auth::routes();
@@ -34,10 +35,10 @@ Route::get('/contact',function () {
 Route::get('/about',function () {
     return view('infos/about');
 });
-Route::get('admin',function () {
+Route::get('/admin',function () {
     return view('admin/opciones');
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Rutas solo accesibles para los admins
 Route::get('/listaCiudad', function () {
