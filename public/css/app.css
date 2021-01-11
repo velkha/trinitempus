@@ -245,6 +245,7 @@ input, select, textarea {
 */
 footer {
     text-align: center;
+    padding-top: 5%;
 }
 
 footer .contact_us {

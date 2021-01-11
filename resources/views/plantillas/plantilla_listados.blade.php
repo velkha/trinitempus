@@ -1,3 +1,4 @@
+@if( Auth::check())
 <html>
 <head>
     <title></title>
@@ -51,4 +52,9 @@
 </body>
 
 </html>
-
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

@@ -35,7 +35,7 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
     <!-- si el usuario ha iniciado sesion mostraremos su foto de perfil el saldo y una opcion para deslogearse-->
     @if(Auth::check())
         <div >
-            <img src="{{asset('assets/local/logo.png')}}" class="profile" />
+            <a href="{{url('/perfil')}}"> <img src="{{asset('assets/local/foca.jpg')}}" class="profile" /></a>
             <ul class="list">
 
                 <li class="date">Saldo actual:{{Auth::user()->saldo}}</li>
