@@ -24,7 +24,7 @@
                     <figure class="gallery__item">
 
                         <img  alt="img1" class="gallery__img">
-                        <p class="img__description">{{$servicio->descripcion}}</p>
+                        <p class="img__description">{{$servicio->id.$servicio->descripcion}}</p>
 
                     </figure>
                 </a>

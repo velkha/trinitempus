@@ -18,6 +18,9 @@ class Comentario extends Model
         'id_padre',
         'id_usuario',
         'texto',
+        //0-> No
+        //1-> Si
+        //
         'privado',
     ];
     public function getUsuario(){
