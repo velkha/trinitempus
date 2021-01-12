@@ -502,6 +502,11 @@ div.divs-vista-servicios div{
 ---------------------------------------------------------               configuraciones de colores y textos   --------------------------------------------------------
 
 */
+.comentariosServicio{
+    width: 100%;
+    float: left;
+}
+
 div.center *{
     width: 50%;
     margin: 0 auto;

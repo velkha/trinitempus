@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+<<<<<<< HEAD
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\CiudadController;
 /*
+=======
+use App\Http\Controllers\ComentarioController   ;
+use App\Http\Controllers\PedidoController;/*
+>>>>>>> f57ffd98f299a1fc550a9824feafacc6742f6d08
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -26,6 +31,7 @@ Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
 
 Auth::routes();
+//rutas servicios
 Route::get('/servicios', function () {
     return view('servicios/servicios_listado');
 });
@@ -33,7 +39,10 @@ Route::get('/servicio/{id}', function ($id) {
     $data = \App\Http\Controllers\ServiceController::show($id);
     return view('servicios/mostrar_servicio', ['data' => $data]);
 });
+Route::post('sendComentario', [ComentarioController::class,'save']);
 
+
+//rutas generales
 Route::get('/contact',function () {
     return view('infos/contact');
 });
