@@ -76,11 +76,12 @@ class CiudadController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public static function destroy($id)
     {
-        //
+        $ciudad=Ciudad::where('id', $id)->get();
+        $ciudad->delete();
+        return redirect("/listaCiudad");
     }
 
     public function getAllCiudades(){

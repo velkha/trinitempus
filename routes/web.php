@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\CiudadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +49,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/listaCiudad', function () {
     return view('listados/ciudades');
 });
+Route::post('/listaCiudad/{id}', function ($id){
+
+    CiudadController::destroy($id);
+});
+
+//Route::post('/listaCiudad/{id}', [CiudadController::class,'destroy($id)']);
+
 Route::get('/listaCategoria', function () {
     return view('listados/categorias');
 });
