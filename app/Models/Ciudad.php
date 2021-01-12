@@ -13,6 +13,7 @@ class Ciudad extends Model
         'nombre',
         'latitud',
         'longitud',
+        'habilitado',
         //fk
         'id_ciudad'
     ];

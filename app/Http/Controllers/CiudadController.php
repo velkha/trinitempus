@@ -16,7 +16,14 @@ class CiudadController extends Controller
     {
         //
     }
-
+    public static function listAllAvailableCitys(){
+            $ciudades=Ciudad::where('habilitado', true)->get();
+            return $ciudades;
+    }
+    public static function listAllDisableCitys(){
+        $ciudades=Ciudad::where('habilitado', false)->get();
+        return $ciudades;
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -79,8 +86,9 @@ class CiudadController extends Controller
      */
     public static function destroy($id)
     {
-        $ciudad=Ciudad::where('id', $id)->get();
-        $ciudad->delete();
+        $ciudad=Ciudad::find($id);
+        $ciudad->habilitado=false;
+        $ciudad->save();
         return redirect("/listaCiudad");
     }
 

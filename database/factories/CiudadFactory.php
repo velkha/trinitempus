@@ -26,6 +26,7 @@ class CiudadFactory extends Factory
             'nombre'=>$this->faker->city,
             'latitud'=>$this->faker->latitude."",
             'longitud'=>$this->faker->longitude."",
+            'habilitado'=>true,
             ];
     }
 }

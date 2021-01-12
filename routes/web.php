@@ -1,16 +1,17 @@
 <?php
 
+use App\Http\Controllers\ComentarioController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-<<<<<<< HEAD
+
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\CiudadController;
 /*
-=======
+
 use App\Http\Controllers\ComentarioController   ;
 use App\Http\Controllers\PedidoController;/*
->>>>>>> f57ffd98f299a1fc550a9824feafacc6742f6d08
+
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -60,7 +61,7 @@ Route::get('/listaCiudad', function () {
 });
 Route::post('/listaCiudad/{id}', function ($id){
 
-    CiudadController::destroy($id);
+    return CiudadController::destroy($id);
 });
 
 //Route::post('/listaCiudad/{id}', [CiudadController::class,'destroy($id)']);

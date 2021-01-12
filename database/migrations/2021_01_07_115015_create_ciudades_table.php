@@ -18,6 +18,7 @@ class CreateCiudadesTable extends Migration
             $table->string('nombre');
             $table->text('latitud');
             $table->text('longitud');
+            $table->boolean('habilitado');
             $table->timestamps();
         });
     }
