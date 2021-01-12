@@ -15,10 +15,10 @@ class CreateCiudadesTable extends Migration
     {
         Schema::create('ciudades', function (Blueprint $table) {
             $table->id();
+            $table->softDeletes();
             $table->string('nombre');
             $table->text('latitud');
             $table->text('longitud');
-            $table->boolean('habilitado');
             $table->timestamps();
         });
     }
