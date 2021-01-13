@@ -43,8 +43,15 @@ Route::get('/servicio/{id}', function ($id) {
     $data = \App\Http\Controllers\ServiceController::show($id);
     return view('servicios/mostrar_servicio', ['data' => $data]);
 });
-Route::post('sendComentario', [ComentarioController::class,'save']);
 
+Route::get('/perfil/{id}', function ($id) {
+    $data = \App\Http\Controllers\UserController::show($id);
+    return view('perfiles/personal_profile', ['data' => $data]);
+});
+Route::get('/modificarPerfil/{id}', function ($id) {
+    $data = \App\Http\Controllers\UserController::show($id);
+    return view('perfiles/cambiar_perfil', ['data' => $data]);
+});
 
 //rutas generales
 Route::get('/contact',function () {
@@ -99,8 +106,11 @@ Route::get('/nuevaCiudad', function () {
 Route::get('/nuevaCategoria', function () {
     return view('admin/nueva_Categoria');
 });
+<<<<<<< HEAD
 Route::post('/nuevaCiudad/creando','App\Http\Controllers\CiudadController@store');
 Route::post('nuevaSubCategoria/crear','App\Http\Controllers\SubcategoriaController@store');
 Route::post('nuevaCategoria/crear','App\Http\Controllers\CategoriaController@store');
 
 
+=======
+>>>>>>> 6c6551afaf57ec49612811838ec1858b2b227a63

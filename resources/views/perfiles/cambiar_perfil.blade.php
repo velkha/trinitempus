@@ -6,15 +6,11 @@
 
 @section('modificacion_2')
     <p>Ciudad</p>
-    <select name="Ciudad">
-        <option value="null"></option>
-        <option value="cat1">1</option>
-        <option value="cat2">2</option>
-        <option value="cat3">3</option>
-        <option value="cat4">4</option>
-        <option value="cat5">5</option>
-        <option value="cat6">6</option>
-    </select>
+    <select id="ciudad" name="ciudad">
+        @foreach(\App\Models\Ciudad::all() as $ciudad)
+            <option value="{{$ciudad->id}}">{{$ciudad->nombre}}</option>
+        @endforeach
+        </select>
 @endsection
 
 @section('modificacion_3', '')

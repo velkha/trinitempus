@@ -26,7 +26,7 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
                 @if(Auth::user()->isAdmin())
                     <li><a href="{{url('/admin')}}">Administracion</a></li>
                 @endif
-                <li><a href="{{url('/servicios')}}">servicios</a></li>
+                <li><a href="{{url('/servicios')}}">Servicios</a></li>
             @endif
             <li><a href="{{url('/contact')}}">Contact</a></li>
             <li><a href="{{url('/about')}}">About us</a></li>
@@ -35,7 +35,7 @@ y en caso de que sea admin se le mostrara la pestaña de administracion-->
     <!-- si el usuario ha iniciado sesion mostraremos su foto de perfil el saldo y una opcion para deslogearse-->
     @if(Auth::check())
         <div >
-            <a href="{{url('/perfil')}}"> <img src="{{asset('assets/local/foca.jpg')}}" class="profile" /></a>
+            <a href="{{url('/perfil/'.Auth::user()->id)}}"> <img src="{{asset('assets/local/foca.jpg')}}" class="profile" /></a>
             <ul class="list">
 
                 <li class="date">Saldo actual:{{Auth::user()->saldo}}</li>
