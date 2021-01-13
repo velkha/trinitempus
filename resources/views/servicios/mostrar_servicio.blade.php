@@ -74,7 +74,7 @@
                         <img src="{{\App\Http\Controllers\Contenido_multimediaController::getContenido($comentario->getUsuario->id_foto_perfil)}}" class="imageCenter" alt="Imagen con referencia al contenido de la seccion  ">
                     </div>
                     <div class="col-9">
-                        <h2>{{$comentario->getUsuario->name}}</h2>
+                        <a href="{{url("/perfil/".$comentario->getUsuario->id)}}"><h2>{{$comentario->getUsuario->name}}</h2></a>
                         <p>
                             {{$comentario->texto}}
                         </p>
