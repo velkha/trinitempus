@@ -32,6 +32,14 @@ Route::get('/servicio/{id}', function ($id) {
     $data = \App\Http\Controllers\ServiceController::show($id);
     return view('servicios/mostrar_servicio', ['data' => $data]);
 });
+Route::get('/perfil/{id}', function ($id) {
+    $data = \App\Http\Controllers\UserController::show($id);
+    return view('perfiles/personal_profile', ['data' => $data]);
+});
+Route::get('/modificarPerfil/{id}', function ($id) {
+    $data = \App\Http\Controllers\UserController::show($id);
+    return view('perfiles/cambiar_perfil', ['data' => $data]);
+});
 
 Route::get('/contact',function () {
     return view('infos/contact');
@@ -60,6 +68,3 @@ Route::get('/nuevaCiudad', function () {
 Route::get('/nuevaCategoria', function () {
     return view('admin/nueva_Categoria');
 });
-
-
-

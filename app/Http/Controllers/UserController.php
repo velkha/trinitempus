@@ -35,7 +35,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->id_ciudad = $request->id_ciudad;
+        $user->telefono = $request->telefono;
+        $user->about_me = $request->about_me;
+        $user->datos_contacto = $request->datos_contacto;
+        $user->saldo = $request->saldo;
+        $user->id_foto_perfil = $request->id_foto_perfil;
+        $user->save();
     }
 
     /**
@@ -44,9 +53,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public static function show($id)
     {
-        //
+        $user= User::find($id);
+
+        return $user;
     }
 
     /**
@@ -69,7 +80,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->id_ciudad = $request->id_ciudad;
+        $user->telefono = $request->telefono;
+        $user->about_me = $request->about_me;
+        $user->datos_contacto = $request->datos_contacto;
+        $user->saldo = $request->saldo;
+        $user->id_foto_perfil = $request->id_foto_perfil;
+        $user->save();
     }
 
     /**
