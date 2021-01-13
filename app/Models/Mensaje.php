@@ -20,7 +20,8 @@ class Mensaje extends Model
          * 3-Borrado
          * 4-Bloqueado
          */
-        'estado'
+        'estado',
+        'deleted_at'
     ];
     public function getEmisor(){
         return $this->belongsTo(User::class, 'id_emisor');

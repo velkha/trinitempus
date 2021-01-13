@@ -11,6 +11,7 @@ class Contenido_multimedia extends Model
     protected $fillable = [
         'uid_owner',
         'contenido',
+        'deleted_at',
     ];
     public function getUsuario(){
         return $this->belongsTo(User::class, 'uid_owner');

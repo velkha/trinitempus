@@ -22,6 +22,7 @@ class Comentario extends Model
         //1-> Si
         //
         'privado',
+        'deleted_at',
     ];
     public function getUsuario(){
         return $this->belongsTo(User::class, 'id_usuario');

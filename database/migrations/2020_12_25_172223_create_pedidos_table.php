@@ -21,6 +21,7 @@ class CreatePedidosTable extends Migration
             $table->text('comentarios_pedido');
             $table->Integer('estado');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

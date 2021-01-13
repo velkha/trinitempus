@@ -18,6 +18,7 @@ class CreateSubcategoriasTable extends Migration
             $table->Integer('id_categoria_padre');
             $table->string('nombre');
             $table->text('descripcion');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

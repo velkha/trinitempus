@@ -33,6 +33,7 @@ class CreateServiciosTable extends Migration
             $table->float('puntuacion')->nullable();
             $table->string('id_comentarios_servicio')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

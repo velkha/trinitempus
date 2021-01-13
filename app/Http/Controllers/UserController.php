@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
+use App\Models\Contenido_multimedia;
+use App\Models\Mensaje;
+use App\Models\Pedido;
+use App\Models\Servicio;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -76,12 +81,37 @@ class UserController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+
      */
-    public function destroy($id)
+    public static function destroy($id)
     {
-        //
+        $usuario=User::find($id);
+        $usuario->delete();
+
     }
+    /*
+    public static function destroySupremo($id)
+    {
+        $usuario=User::find($id);
+        $usuario->delete();
+
+        $servicio=Servicio->getOwner->id;
+        $servicio->delete();
+
+        $pedido=Pedido::find($id);
+        $pedido->delete();
+
+        $mensaje=Mensaje::find($id);
+        $mensaje->delete();
+
+        $multimedia=Contenido_multimedia::find($id);
+        $multimedia->delete();
+
+        $comentario=Comentario::find($id);
+        $comentario->delete();
+
+    }
+    */
     public static function getAllUsuarios(){
         $usuarios = User::all();
         return $usuarios;

@@ -27,22 +27,32 @@ class CiudadController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function create()
     {
-        //
+        /*
+        $ciudad=new Ciudad();
+        return View::make('ciudad.save')->with('ciudad',$ciudad);
+        */
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     *
+     * @param Request $request
+     *
      */
-    public function store(Request $request)
+    public static function store(Request $request)
     {
-        //
+
+        $ciudad=new Ciudad;
+        $ciudad->nombre=$request->get('NCiudad');
+        $ciudad->latitud=$request->get('latitud');
+        $ciudad->longitud=$request->get('longitud');
+        $ciudad->save();
+        return redirect("/nuevaCiudad");
     }
 
     /**
@@ -88,7 +98,7 @@ class CiudadController extends Controller
     {
         $ciudad=Ciudad::find($id);
         $ciudad->delete();
-        return redirect("/listaCiudad");
+
     }
 
     public function getAllCiudades(){

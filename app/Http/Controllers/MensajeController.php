@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mensaje;
 use Illuminate\Http\Request;
 
 class MensajeController extends Controller
@@ -75,10 +76,11 @@ class MensajeController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+
      */
-    public function destroy($id)
+    public static function destroy($id)
     {
-        //
+        $mensaje=Mensaje::find($id);
+        $mensaje->delete();
     }
 }

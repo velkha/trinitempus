@@ -15,7 +15,13 @@
             <div class="col-2">{{$usuarios->name}}</div>
             <div class="col-6">{{$usuarios->email}}</div>
             <div class="col-2">Modificar</div>
-            <div class="col-1">Borrar</div>
+            <form method="post" action="{{url("/listaUsuario/".$usuarios->id)}}">
+                <div class="col-1">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btnCamuflado">Borrar</button>
+
+                </div>
+            </form>
         </div>
     @endforeach
 @endsection

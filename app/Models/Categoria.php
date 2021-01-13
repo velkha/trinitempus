@@ -12,7 +12,8 @@ class Categoria extends Model
         'nombre',
         'descripcion',
         //fk
-        'id_categoria_padre'
+        'id_categoria_padre',
+        'deleted_at',
     ];
     public function getServicio(){
         return $this->hasMany(Servicio::class, 'categoria');

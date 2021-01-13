@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pedido;
 use App\Models\Servicio;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -34,5 +35,11 @@ class PedidoController extends Controller
             echo $pedido->comentarios_pedido;
         }*/
         return $pedidos;
+    }
+    public static function destroy($id)
+    {
+        $pedido=Pedido::find($id);
+        $pedido->delete();
+
     }
 }

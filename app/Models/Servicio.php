@@ -25,8 +25,10 @@ class Servicio extends Model
         'n_usos',
         'puntuacion',
         'id_comentarios_servicio',
+        'deleted_at',
         //fk
         'id_servicio'
+
     ];
     public function getOwner(){
         return $this->belongsTo(User::class, 'uid_owner');
