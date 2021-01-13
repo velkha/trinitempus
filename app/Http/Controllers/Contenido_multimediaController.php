@@ -25,4 +25,10 @@ class Contenido_multimediaController extends Controller
                 }
             }
     }
+    public static function destroy($id)
+    {
+        $multimedia=Contenido_multimedia::find($id);
+        $multimedia->delete();
+
+    }
 }

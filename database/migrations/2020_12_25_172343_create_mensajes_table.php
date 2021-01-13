@@ -21,6 +21,7 @@ class CreateMensajesTable extends Migration
             $table->Integer('id_contenido_multimedia')->nullable();
             $table->Integer('estado');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

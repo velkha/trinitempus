@@ -35,4 +35,10 @@ class ComentarioController extends Controller
             return redirect(url("/home"));
         }
     }
+    public static function destroy($id)
+    {
+        $comentario=Comentario::find($id);
+        $comentario->delete();
+
+    }
 }

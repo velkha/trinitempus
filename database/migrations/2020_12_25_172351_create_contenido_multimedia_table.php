@@ -18,6 +18,7 @@ class CreateContenidoMultimediaTable extends Migration
             $table->Integer('uid_owner');
             $table->text('contenido');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

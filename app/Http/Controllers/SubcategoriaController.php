@@ -16,7 +16,14 @@ class SubcategoriaController extends Controller
     {
         //
     }
-
+    public static function listAllAvailableSubCategories(){
+        $categorias=SubCategoria::where('habilitado', true)->get();
+        return $categorias;
+    }
+    public static function listAllDisableSubCategories(){
+        $categorias=SubCategoria::where('habilitado', false)->get();
+        return $categorias;
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -31,15 +38,16 @@ class SubcategoriaController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     *
      */
-    public function store(Request $request)
+    public static function store(Request $request)
     {
         $subcategoria= new Subcategoria;
-        $subcategoria->id_categoria_padre=$request->id_categoria_padre;
-        $subcategoria->nombre=$request->nombre;
-        $subcategoria->descripcion=$request->descripcion;
+        $subcategoria->id_categoria_padre=$request->get('id_categoria_padre');
+        $subcategoria->nombre=$request->get('nombre');
+        $subcategoria->descripcion="hola"/*$request->descripcion*/;
         $subcategoria->save();
+        return redirect('nuevaCategoria');
     }
 
     /**
@@ -86,11 +94,13 @@ class SubcategoriaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+
      */
-    public function destroy($id)
+    public static function destroy($id)
     {
-        //
+        $categoria=SubCategoria::find($id);
+        $categoria->delete();
+
     }
     public static function getAllCategorias(){
         $categorias = Subcategoria::all();

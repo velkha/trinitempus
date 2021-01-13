@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\SubcategoriaController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -40,6 +43,7 @@ Route::get('/servicio/{id}', function ($id) {
     $data = \App\Http\Controllers\ServiceController::show($id);
     return view('servicios/mostrar_servicio', ['data' => $data]);
 });
+Route::post('sendComentario', [ComentarioController::class,'save']);
 
 Route::get('/perfil/{id}', function ($id) {
     $data = \App\Http\Controllers\UserController::show($id);
@@ -68,8 +72,26 @@ Route::get('/listaCiudad', function () {
 });
 Route::post('/listaCiudad/{id}', function ($id){
 
-    return CiudadController::destroy($id);
+   CiudadController::destroy($id);
+    return redirect("/listaCiudad");
 });
+Route::post('/listaCategoria/{id}', function ($id){
+
+    CategoriaController::destroy($id);
+    return redirect("/listaCategoria");
+});
+Route::post('/listaUsuario/{id}', function ($id){
+
+    UserController::destroy($id);
+    return redirect("/listaUsuario");
+});
+
+Route::post('/listaSubCategoria/{id}', function ($id){
+
+    SubcategoriaController::destroy($id);
+    return redirect("/listaCategoria");
+});
+
 
 //Route::post('/listaCiudad/{id}', [CiudadController::class,'destroy($id)']);
 
@@ -85,3 +107,8 @@ Route::get('/nuevaCiudad', function () {
 Route::get('/nuevaCategoria', function () {
     return view('admin/nueva_Categoria');
 });
+
+Route::post('/nuevaCiudad/creando','App\Http\Controllers\CiudadController@store');
+Route::post('nuevaSubCategoria/crear','App\Http\Controllers\SubcategoriaController@store');
+Route::post('nuevaCategoria/crear','App\Http\Controllers\CategoriaController@store');
+

@@ -10,6 +10,8 @@
 @extends('footer-nav.nav')
 @section('TextoModif','Nueva Categoria')
 <section>
+    <form action="{{url("nuevaCategoria/crear")}}" method="post">
+        @csrf
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6 withBackground">
@@ -17,17 +19,17 @@
                 <div class="col-3"></div>
                 <div class="col-4">Nombre Categoria
                     <br>
-                    <input type="text" id="NCiudad"></div>
+                    <input type="text" name="nombre"></div>
 
             </div>
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-4">
-                    <select name="Categorias">
+                    <select name="id_categoria_padre">
                         <option value="0">Principal</option>
-                        <option>Categoria1</option>
-                        <option>Categoria2</option>
-                        <option>Categoria3</option>
+                        @foreach(\App\Models\Categoria::all() as $categoria)
+                            <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+                        @endforeach
                     </select>
 
             </div>
@@ -35,13 +37,14 @@
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4">
-                    <button class="standard">Crear/Modificar</button>
+                    <input type="submit" value="Crear/Modificar" class="standard">
                 </div>
             </div>
 
 
     </div>
     </div>
+    </form>
 </section>
 @include('footer-nav.footer')
 

@@ -16,7 +16,14 @@ class CategoriaController extends Controller
     {
         //
     }
-
+    public static function listAllAvailableCategories(){
+        $categorias=Categoria::where('habilitado', true)->get();
+        return $categorias;
+    }
+    public static function listAllDisableCategories(){
+        $categorias=Categoria::where('habilitado', false)->get();
+        return $categorias;
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -31,14 +38,20 @@ class CategoriaController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     *
      */
-    public function store(Request $request)
+    public static function store(Request $request)
     {
-        $categoria= new Categoria;
-        $categoria->nombre=$request->nombre;
-        $categoria->descripcion=$request->descripcion;
-        $categoria->save();
+        if ($request->get('id_categoria_padre')==0){
+            $categoria= new Categoria;
+            $categoria->nombre=$request->get('nombre');
+            $categoria->descripcion="hola"/*$request->descripcion*/;
+            $categoria->save();
+        }else{
+            SubcategoriaController::store($request);
+
+        }
+        return redirect('nuevaCategoria');
     }
 
     /**
@@ -85,11 +98,13 @@ class CategoriaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+
      */
-    public function destroy($id)
+    public static function destroy($id)
     {
-        //
+        $categoria=Categoria::find($id);
+        $categoria->delete();
+        return redirect("/listaCategoria");
     }
     public static function getAllCategorias(){
         $categorias = Categoria::all();

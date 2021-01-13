@@ -19,7 +19,8 @@ class Pedido extends Model
         // 3 - Completado
         // 4 - Error
         // 9 - Test
-        'estado'
+        'estado',
+        'deleted_at',
     ];
 
     public function getServicio(){

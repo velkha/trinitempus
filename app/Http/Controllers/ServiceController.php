@@ -127,9 +127,10 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public static function destroy($id)
     {
-
+        $servicio=Servicio::find($id);
+        $servicio->delete();
     }
     public static function getAllServicios(){
         $servicios = Servicio::all();

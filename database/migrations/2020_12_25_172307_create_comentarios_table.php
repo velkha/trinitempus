@@ -21,6 +21,7 @@ class CreateComentariosTable extends Migration
             $table->text('texto');
             $table->Integer('privado');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

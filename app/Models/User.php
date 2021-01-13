@@ -33,7 +33,8 @@ class User extends Authenticatable
         'id_emisor',
         'uid_cliente',
         'id_receptor',
-        'uid_owner'
+        'uid_owner',
+        'deleted_at',
     ];
 
     /**
