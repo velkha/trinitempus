@@ -37,7 +37,7 @@
                     @show
                 </div>
             </div>
-            {{\App\Http\Controllers\GenerateDataController::generarLista(app()->view->getSections()['listType'])}}
+
             <div class="row">
                 <div class="col-12">
                     @section('zonaExtra')

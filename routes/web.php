@@ -1,10 +1,17 @@
 <?php
 
+use App\Http\Controllers\ComentarioController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\CiudadController;
 /*
+
+use App\Http\Controllers\ComentarioController   ;
+use App\Http\Controllers\PedidoController;/*
+
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -25,6 +32,7 @@ Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
     ->name('servicebyid');
 
 Auth::routes();
+//rutas servicios
 Route::get('/servicios', function () {
     return view('servicios/servicios_listado');
 });
@@ -32,6 +40,7 @@ Route::get('/servicio/{id}', function ($id) {
     $data = \App\Http\Controllers\ServiceController::show($id);
     return view('servicios/mostrar_servicio', ['data' => $data]);
 });
+
 Route::get('/perfil/{id}', function ($id) {
     $data = \App\Http\Controllers\UserController::show($id);
     return view('perfiles/personal_profile', ['data' => $data]);
@@ -41,6 +50,7 @@ Route::get('/modificarPerfil/{id}', function ($id) {
     return view('perfiles/cambiar_perfil', ['data' => $data]);
 });
 
+//rutas generales
 Route::get('/contact',function () {
     return view('infos/contact');
 });
@@ -56,6 +66,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/listaCiudad', function () {
     return view('listados/ciudades');
 });
+Route::post('/listaCiudad/{id}', function ($id){
+
+    return CiudadController::destroy($id);
+});
+
+//Route::post('/listaCiudad/{id}', [CiudadController::class,'destroy($id)']);
+
 Route::get('/listaCategoria', function () {
     return view('listados/categorias');
 });

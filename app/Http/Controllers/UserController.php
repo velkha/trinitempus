@@ -102,6 +102,9 @@ class UserController extends Controller
     {
         //
     }
-
+    public static function getAllUsuarios(){
+        $usuarios = User::all();
+        return $usuarios;
+    }
 
 }

@@ -12,4 +12,7 @@ class Contenido_multimedia extends Model
         'uid_owner',
         'contenido',
     ];
+    public function getUsuario(){
+        return $this->belongsTo(User::class, 'uid_owner');
+    }
 }
