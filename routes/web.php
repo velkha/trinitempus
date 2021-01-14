@@ -106,11 +106,7 @@ Route::get('/nuevaCiudad', function () {
 Route::get('/nuevaCategoria', function () {
     return view('admin/nueva_Categoria');
 });
-<<<<<<< HEAD
+
 Route::post('/nuevaCiudad/creando','App\Http\Controllers\CiudadController@store');
 Route::post('nuevaSubCategoria/crear','App\Http\Controllers\SubcategoriaController@store');
 Route::post('nuevaCategoria/crear','App\Http\Controllers\CategoriaController@store');
-
-
-=======
->>>>>>> 6c6551afaf57ec49612811838ec1858b2b227a63
