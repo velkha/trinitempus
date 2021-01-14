@@ -16,6 +16,18 @@ class PedidoController extends Controller
 
     }
 
+    public static function show($id)
+    {
+        $pedidos= Pedido::find($id);
+
+        return $pedidos;
+    }
+
+    public static function listarTodosPedidos(){
+        $pedidos=Pedido::all();
+        return $pedidos;
+    }
+
     /**
      * Devuelve un array de objetos con los diferentes pedidos y el servicio al que hacen referencia
      * @param $id
