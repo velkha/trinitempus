@@ -83,18 +83,22 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $user = User::find($id);
+        $user = User::find($request->id_usuario);
         $user->name = $request->name;
         $user->email = $request->email;
         $user->id_ciudad = $request->id_ciudad;
         $user->telefono = $request->telefono;
         $user->about_me = $request->about_me;
         $user->datos_contacto = $request->datos_contacto;
-        $user->saldo = $request->saldo;
+        if($request->saldo!=null){
+            $user->saldo = $request->saldo;
+        }
+
         $user->id_foto_perfil = $request->id_foto_perfil;
         $user->save();
+        return redirect(url("/home"));
     }
 
     /**

@@ -22,7 +22,7 @@
             <a href="/" class="standard">Volver al innicio</a>
         </div>
         <div class="col-4 center">
-            <a href="{{url("/servicio/".$data->id)}}" class="standard">Sus Servicios</a>
+            <a href="{{url("/servicios")}}" class="standard">Sus Servicios</a>
         </div>
     </div>
 @endsection

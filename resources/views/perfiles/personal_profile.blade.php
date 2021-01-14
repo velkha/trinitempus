@@ -14,7 +14,10 @@
 @section('campo_central', $data->datos_contacto)
 
 @section('descripcion')
-    <p>{{$data->about_me}}</p>
+<h2>Datos de contacto</h2>
+<p>{{$data->datos_contacto}}</p>
+<h2>About me</h2>
+<p>{{$data->about_me}}</p>
 @endsection
 
 @section('zonaExtra')
