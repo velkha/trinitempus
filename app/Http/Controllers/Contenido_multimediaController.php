@@ -7,6 +7,7 @@ use App\Models\Contenido_multimedia;
 class Contenido_multimediaController extends Controller
 {
     public static function getContenido($id){
+
         if($id==null){
             return asset("assets/local/foca.jpg");
         }
