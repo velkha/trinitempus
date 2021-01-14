@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contenido_multimedia;
 use App\Models\Servicio;
 use Illuminate\Http\Request;
 
@@ -152,4 +153,35 @@ class ServiceController extends Controller
         $servicio= Servicio::find($idServicio)->get();
         $servicio->id_contenidos_multimedia=$servicio->id_comentarios_servicio.$idContenido.";";
     }
+
+    public static function getContenidoMultimedia($id){
+
+        $lista= Servicio::find($id);
+
+        $lista= $lista->id_contenidos_multimedia;
+        $arrayIDs= explode(";", $lista);
+
+        /*$arrayContenido=array();
+        foreach ($arrayIDs as $idContenido){
+            $contenido = Contenido_multimediaController::getContenido($idContenido);
+            array_push($arrayContenido, $contenido);
+        }*/
+        array_pop($arrayIDs);
+        $arrayIDs= array_unique($arrayIDs);
+        return $arrayIDs;
+    }
+    public static function getImageRouteList($arrayIDs){
+        $arrayContenido=array();
+        foreach ($arrayIDs as $idContenido){
+            if($idContenido!=null&$idContenido!="") {
+                $contenido = Contenido_multimediaController::getContenido($idContenido);
+                array_push($arrayContenido, $contenido);
+            }
+        }
+        return $arrayContenido;
+    }
+    public static function getContenidoMultimediaServiceView(Request $req){
+        dd($req);
+    }
+
 }

@@ -195,7 +195,7 @@ input, select, textarea {
     height: 100%;
     min-width: 100%;
     object-fit: cover;
-    content: url("../assets/local/foca.jpg");
+    /*content: url("../assets/local/foca.jpg");*/
 }
 .img__description {
     position: absolute;
