@@ -17,7 +17,13 @@
             <div class="col-2">{{$categoria->nombre}}</div>
             <div class="col-2">PRINCIPAL</div>
             <div class="col-2"></div>
-            <div class="col-2">Modificar</div>
+            <form method="post" action="{{url("/modificarCategoria/".$categoria->id)}}">
+                <div class="col-2">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btnCamuflado">Modificar</button>
+
+                </div>
+            </form>
             <form method="post" action="{{url("/listaCategoria/".$categoria->id)}}">
                 <div class="col-2">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -33,7 +39,13 @@
             <div class="col-2">{{$categoria->nombre}}</div>
             <div class="col-2">Secundaria</div>
             <div class="col-2">{{$categoria->id_categoria_padre}}</div>
-            <div class="col-2">Modificar</div>
+            <form method="post" action="{{url("/modificarSubCategoria/".$categoria->id)}}">
+                <div class="col-2">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btnCamuflado">Modificar</button>
+
+                </div>
+            </form>
             <form method="post" action="{{url("/listaSubCategoria/".$categoria->id)}}">
                 <div class="col-2">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

@@ -60,7 +60,7 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public static function show($id)
     {
         $categoria= Categoria::find($id);
         return $categoria;
@@ -83,15 +83,21 @@ class CategoriaController extends Controller
     'descripcion',
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     *
      */
-    public function update(Request $request, $id)
+    public static function update(Request $request, $id)
     {
-        $categoria= Categoria::find($id);
-        $categoria->nombre=$request->nombre;
-        $categoria->descripcion=$request->descripcion;
-        $categoria->save();
+        if($request->get('id_categoria_padre')==0) {
+            $categoria = Categoria::find($id);
+            $categoria->nombre=$request->get('nombre');
+            $categoria->descripcion = "hola"; //$request->descripcion;
+            $categoria->save();
 
+        }else{
+            SubcategoriaController::store($request);
+            CategoriaController::destroy($id);
+        }
+        return redirect('/listaCategoria');
     }
 
     /**

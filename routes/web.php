@@ -126,3 +126,20 @@ Route::get('/nuevaCategoria', function () {
 Route::post('/nuevaCiudad/creando','App\Http\Controllers\CiudadController@store');
 Route::post('nuevaSubCategoria/crear','App\Http\Controllers\SubcategoriaController@store');
 Route::post('nuevaCategoria/crear','App\Http\Controllers\CategoriaController@store');
+Route::post('/modificarCiudad/{id}',function ($id){
+    $ciudad=CiudadController::show($id);
+    return view('admin/modifCiudad', ['ciudad' => $ciudad]);
+});
+Route::post('/modificarCiudad/add/{id}','\App\Http\Controllers\CiudadController@update');
+Route::post('/modificarCategoria/{id}',function ($id){
+    $categoria=CategoriaController::show($id);
+
+    return view('admin/modifCategoria', ['categoria' => $categoria]);
+});
+Route::post('/modificarCategoria/add/{id}','\App\Http\Controllers\CategoriaController@update');
+Route::post('/modificarSubCategoria/{id}',function ($id){
+    $categoria=SubCategoriaController::show($id);
+
+    return view('admin/modifSubCategoria', ['categoria' => $categoria]);
+});
+Route::post('/modificarSubCategoria/add/{id}','\App\Http\Controllers\SubCategoriaController@update');
