@@ -32,18 +32,33 @@ Route::get('/perfil', function () {
     return view('perfiles/personal_profile');
 });
 Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
-    ->name('servicebyid');
+    ->name('contentbyservice');
 
 Auth::routes();
 //rutas servicios
 Route::get('/servicios', function () {
-    return view('servicios/servicios_listado');
+    $ciudad=$_GET['ciudad'];
+    return view('servicios/servicios_listado', ['ciudad' => $ciudad]);
 });
 Route::get('/servicio/{id}', function ($id) {
     $data = \App\Http\Controllers\ServiceController::show($id);
     return view('servicios/mostrar_servicio', ['data' => $data]);
 });
 Route::post('sendComentario', [ComentarioController::class,'save']);
+
+//-
+Route::get('/contenido_servicio/{id}', function($id){
+    $dataServicio = \App\Http\Controllers\ServiceController::show($id);
+    return view('servicios/mostrar_contenido_multimedia_servicio', ['dataServicio' => $dataServicio]);
+});
+//Route::post('contenido_servicio/{id}', [\App\Http\Controllers\ServiceController::class,'getContenidoMultimediaServiceView']);
+Route::get('/contenido_servicio/{id}/{idcontenido}', function($id, $idcontenido){
+    $dataServicio = \App\Http\Controllers\ServiceController::show($id);
+
+    return view('servicios/mostrar_content_con_comentarios',
+        ['dataServicio' => $dataServicio], ['id_contenido' => $idcontenido]);
+
+});
 
 Route::get('/perfil/{id}', function ($id) {
     $data = \App\Http\Controllers\UserController::show($id);

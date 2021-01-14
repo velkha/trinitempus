@@ -34,42 +34,15 @@
             </div>
             <div class="row">
                 <div class="gallery">
-                    <figure class="gallery__item">
-                        <img  alt="img1" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img 2" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img 3" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img 4" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img 5" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img6" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img7" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img 82" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
-                    <figure class="gallery__item">
-                        <img alt="img9" class="gallery__img">
-                        <p class="img__description">lo lolololo lo</p>
-                    </figure>
+                    @foreach(\App\Models\Servicio::all()->random(9) as $servicio)
+                        <a href="{{url("servicio/".$servicio->id)}}">
+                            <figure class="gallery__item">
+                                <img  alt="img1" class="gallery__img" src="{{\App\Http\Controllers\Contenido_multimediaController::getContenido($servicio->foto_principal)}}">
+                                <p class="img__description">{{$servicio->descripcion}}</p>
+
+                            </figure>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

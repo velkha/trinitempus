@@ -12,7 +12,11 @@ class ComentarioController extends Controller
         $comentario=$comentario->reverse();
         return $comentario;
     }
-
+    public static function getComentariosFromContenido($id){
+        $comentario= Comentario::with('getUsuario')->where('id_padre', $id)->where('tipo_comentario', 1)->get();
+        $comentario=$comentario->reverse();
+        return $comentario;
+    }
     function save(Request $req){
         $comentario= new Comentario;
         $comentario->tipo_comentario=$req->tipo_comentario;
@@ -20,16 +24,17 @@ class ComentarioController extends Controller
         $comentario->id_usuario=$req->id_usuario;
         $comentario->texto=$req->texto_comentario;
         if($req->has('privado')){
-            $comentario->privado=0;
+            $comentario->privado=1;
         }
         else{
-            $comentario->privado=1;
+            $comentario->privado=0;
         }
         $comentario->save();
         if($req->tipo_comentario==0)
-        return redirect(url("/servicio/$req->id_padre"));
+            return redirect(url("/servicio/$req->id_padre"));
         else if($req->tipo_comentario==1){
-            //
+            $dataServicio = \App\Http\Controllers\ServiceController::show($req->id_servicio);
+            return redirect(url("contenido_servicio/".$req->id_servicio."/".$req->id_padre));
         }
         else{
             return redirect(url("/home"));
