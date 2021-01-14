@@ -16,6 +16,21 @@ class PedidoController extends Controller
 
     }
 
+    public static function save(Request $req){
+        $pedido = new Pedido;
+        $servicio= Servicio::find($req->id_servicio);
+        $usuario= User::find($req->id_user);
+        if($usuario->saldo-$servicio->precio_decimal>0){
+            $pedido->id_servicio=$servicio->id;
+            $pedido->uid_cliente=$usuario->id;
+            $pedido->estado=0;
+            $pedido->save();
+            return redirect(url("home"));
+        }
+        else{
+            return redirect(url("home"));
+        }
+    }
     /**
      * Devuelve un array de objetos con los diferentes pedidos y el servicio al que hacen referencia
      * @param $id
