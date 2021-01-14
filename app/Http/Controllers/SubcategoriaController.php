@@ -56,7 +56,7 @@ class SubcategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public static function show($id)
     {
         $categoria= Subcategoria::find($id);
         return $categoria;
@@ -79,14 +79,21 @@ class SubcategoriaController extends Controller
     'descripcion',
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     *
      */
-    public function update(Request $request, $id)
+    public static function update(Request $request, $id)
     {
+        if($request->get('id_categoria_padre')!=0){
         $categoria= Subcategoria::find($id);
-        $categoria->nombre=$request->nombre;
-        $categoria->descripcion=$request->descripcion;
+        $categoria->id_categoria_padre=$request->get('id_categoria_padre');
+        $categoria->nombre=$request->get('nombre');
+        $categoria->descripcion="hola"/*$request->descripcion*/;
         $categoria->save();
+    }else{
+    CategoriaController::store($request);
+    SubcategoriaController::destroy($id);
+}
+return redirect('/listaCategoria');
 
     }
 
@@ -100,7 +107,7 @@ class SubcategoriaController extends Controller
     {
         $categoria=SubCategoria::find($id);
         $categoria->delete();
-
+        return redirect("/listaCategoria");
     }
     public static function getAllCategorias(){
         $categorias = Subcategoria::all();

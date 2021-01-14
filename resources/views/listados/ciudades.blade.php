@@ -14,7 +14,13 @@
         <div class="row">
             <div class="col-3">{{$ciudad->id}}</div>
             <div class="col-3">{{$ciudad->nombre}}</div>
-            <div class="col-3">Modificar</div>
+            <form method="post" action="{{url("/modificarCiudad/".$ciudad->id)}}">
+                <div class="col-3">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btnCamuflado">Modificar</button>
+
+                </div>
+            </form>
             <form method="post" action="{{url("/listaCiudad/".$ciudad->id)}}">
             <div class="col-3">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

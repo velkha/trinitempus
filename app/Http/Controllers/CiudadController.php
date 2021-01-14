@@ -61,9 +61,11 @@ class CiudadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public static function show($id)
     {
-        //
+        $ciudad= Ciudad::find($id);
+
+        return $ciudad;
     }
 
     /**
@@ -82,11 +84,17 @@ class CiudadController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     *
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $ciudad=Ciudad::find($id);
+        $ciudad->nombre=$request->get('NCiudad');
+        $ciudad->latitud=$request->get('latitud');
+        $ciudad->longitud=$request->get('longitud');
+        $ciudad->save();
+        return redirect("/listaCiudad");
     }
 
     /**
