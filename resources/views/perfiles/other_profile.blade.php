@@ -4,17 +4,13 @@
 @endsection
 
 
-@section('campo_datos_2', 'NOMBRE')
+@section('campo_datos_2', $data->name)
 
 
-@section('campo_central', 'datos de contacto del owner')
+@section('campo_central', $data->datos_contacto)
 
 @section('descripcion')
-    <p>mENUDA GRANDIOSA DESCRIPCION mENUDA GRANDIOSA DESCRIPCION mENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCION mENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCIONmENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCION
-        mENUDA GRANDIOSA DESCRIPCION</p>
+    <p>{{$data->about_me}}</p>
 @endsection
 @section('zonaExtra')
     <div class="row" >
@@ -25,7 +21,7 @@
             <a href="/" class="standard">Volver al innicio</a>
         </div>
         <div class="col-4 center">
-            <a href="#" class="standard">Sus Servicios</a>
+            <a href="{{url("/servicio/".$data->id)}}" class="standard">Sus Servicios</a>
         </div>
     </div>
 @endsection

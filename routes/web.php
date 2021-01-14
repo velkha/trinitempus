@@ -31,6 +31,9 @@ Route::get('/', function () {
 Route::get('/perfil', function () {
     return view('perfiles/personal_profile');
 });
+Route::get('/perfilExterno', function () {
+    return view('perfiles/other_profile');
+});
 Route::get('/testController/{id}', [PedidoController::class,'getPedidoByOwner'])
     ->name('contentbyservice');
 
@@ -78,6 +81,10 @@ Route::get('/perfil/{id}', function ($id) {
 Route::get('/modificarPerfil/{id}', function ($id) {
     $data = \App\Http\Controllers\UserController::show($id);
     return view('perfiles/cambiar_perfil', ['data' => $data]);
+});
+
+Route::get('/pedidos', function () {
+    return view('listados/pedidos');
 });
 
 //rutas generales

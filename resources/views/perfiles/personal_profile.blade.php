@@ -22,10 +22,10 @@
 
         </div>
         <div class="col-4 ">
-            <a href="{{url("#")}}" class="standard">Mis Pedidos</a>
+            <a href="{{url("/pedidos")}}" class="standard">Mis Pedidos</a>
         </div>
         <div class="col-4 ">
-            <a href="{{url("/servicio/".Auth::user()->id)}})}}" class="standard">Mis Servicios</a>
+            <a href="{{url("/servicio/".Auth::user()->id)}}" class="standard">Mis Servicios</a>
         </div>
     </div>
     <div class="row">

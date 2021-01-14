@@ -17,7 +17,9 @@
 
                 <div class="col-9">
                     <div class="row">
-                        <p>@yield('modificacion_1')</p><input type="text" name="@yield('modificacion_1')">
+                        @section('modificacion_1')
+
+                        @show
                     </div>
                     <br>
                     <div class="row">
@@ -27,20 +29,35 @@
                     </div>
                     <br>
                     <div class="row">
-                        <p>@yield('modificacion_3')</p><input type="text" name="@yield('modificacion_3')">
+                        @section('modificacion_3')
+
+                        @show
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col3"></div>
                 <div class="col-6">
-                    <p>@yield('modificacion_4')</p><input type="text" name="@yield('modificacion_4')">
+                    @section('modificacion_4')
+
+                    @show
+                </div>
+                <div class="col3"></div>
+            </div>
+            <div class="row">
+                <div class="col3"></div>
+                <div class="col-6">
+                    @section('modificacion_5')
+
+                    @show
                 </div>
                 <div class="col3"></div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <p>@yield('modificacion_5')</p><textarea name="@yield('modificacion_5')" cols="40" rows="5"></textarea>
+                    @section('modificacion_6')
+
+                    @show
                 </div>
             </div>
             <div class="row">

@@ -15,7 +15,6 @@ class PedidoController extends Controller
     public static function getPedidosById(){
 
     }
-
     public static function save(Request $req){
         $pedido = new Pedido;
         $servicio= Servicio::find($req->id_servicio);
@@ -31,9 +30,19 @@ class PedidoController extends Controller
             return redirect(url("home"));
         }
     }
+    public static function show($id)
+    {
+        $pedidos= Pedido::find($id);
+
+        return $pedidos;
+    }
+
+    public static function listarTodosPedidos(){
+        $pedidos=Pedido::all();
+        return $pedidos;
+    }
     /**
      * Devuelve un array de objetos con los diferentes pedidos y el servicio al que hacen referencia
-     * @param $id
      */
     public static function getPedidoByServicio($id){
         $pedidos= Servicio::find($id)->with('getPedidos')->get();
