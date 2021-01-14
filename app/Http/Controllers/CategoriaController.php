@@ -45,13 +45,13 @@ class CategoriaController extends Controller
         if ($request->get('id_categoria_padre')==0){
             $categoria= new Categoria;
             $categoria->nombre=$request->get('nombre');
-            $categoria->descripcion="hola"/*$request->descripcion*/;
+            $categoria->descripcion=$request->get('descripcion');
             $categoria->save();
         }else{
             SubcategoriaController::store($request);
 
         }
-        return redirect('nuevaCategoria');
+        return redirect('/listaCategoria');
     }
 
     /**
@@ -90,7 +90,7 @@ class CategoriaController extends Controller
         if($request->get('id_categoria_padre')==0) {
             $categoria = Categoria::find($id);
             $categoria->nombre=$request->get('nombre');
-            $categoria->descripcion = "hola"; //$request->descripcion;
+            $categoria->descripcion=$request->get('descripcion');
             $categoria->save();
 
         }else{

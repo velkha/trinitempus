@@ -31,7 +31,7 @@
     <div class="row" >
         <div class="col-2"></div>
         <div class="col-2">
-            <a href="#" class="standard">ADQUIRIR SERVICIO</a>
+            <a href={{url("adquirir_servicio/".$data->id)}} class="standard">ADQUIRIR SERVICIO</a>
         </div>
         <div class="col-1"></div>
         <div class="col-2">

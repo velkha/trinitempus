@@ -17,8 +17,8 @@ class CreatePedidosTable extends Migration
             $table->id();
             $table->Integer('id_servicio');
             $table->Integer('uid_cliente');
-            $table->text('contenido_multimedia_pedido');
-            $table->text('comentarios_pedido');
+            $table->text('contenido_multimedia_pedido')->nullable();
+            $table->text('comentarios_pedido')->nullable();
             $table->Integer('estado');
             $table->timestamps();
             $table->softDeletes();

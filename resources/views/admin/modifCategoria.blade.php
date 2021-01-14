@@ -25,6 +25,13 @@
                 </div>
                 <div class="row">
                     <div class="col-3"></div>
+                    <div class="col-4">Descripcion Categoria
+                        <br>
+                        <input type="text" name="descripcion" value="{{$categoria->descripcion}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
                     <div class="col-4">
                         <select name="id_categoria_padre">
                             <option value="0">Principal</option>

@@ -52,7 +52,7 @@ class CiudadController extends Controller
         $ciudad->latitud=$request->get('latitud');
         $ciudad->longitud=$request->get('longitud');
         $ciudad->save();
-        return redirect("/nuevaCiudad");
+        return redirect("/listaCiudad");
     }
 
     /**

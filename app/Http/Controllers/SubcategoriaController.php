@@ -45,9 +45,9 @@ class SubcategoriaController extends Controller
         $subcategoria= new Subcategoria;
         $subcategoria->id_categoria_padre=$request->get('id_categoria_padre');
         $subcategoria->nombre=$request->get('nombre');
-        $subcategoria->descripcion="hola"/*$request->descripcion*/;
+        $subcategoria->descripcion=$request->get('descripcion');
         $subcategoria->save();
-        return redirect('nuevaCategoria');
+        return redirect('/listaCategoria');
     }
 
     /**
@@ -87,7 +87,7 @@ class SubcategoriaController extends Controller
         $categoria= Subcategoria::find($id);
         $categoria->id_categoria_padre=$request->get('id_categoria_padre');
         $categoria->nombre=$request->get('nombre');
-        $categoria->descripcion="hola"/*$request->descripcion*/;
+        $categoria->descripcion=$request->get('descripcion');
         $categoria->save();
     }else{
     CategoriaController::store($request);
