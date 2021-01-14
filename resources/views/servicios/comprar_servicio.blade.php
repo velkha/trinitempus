@@ -1,3 +1,4 @@
+@if( Auth::check())
     @extends('plantillas.plantilla_servicios')
     @section('TextoModif', 'Comprar Servicio')
     @section('topServicios')
@@ -35,3 +36,9 @@
         </button>
     </div>
     @endsection
+    @else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

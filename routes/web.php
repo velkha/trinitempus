@@ -75,6 +75,12 @@ Route::get('/modificarPerfil/{id}', function ($id) {
 Route::get('/pedidos', function () {
     return view('listados/pedidos');
 });
+Route::get('/misServicios', function () {
+    return view('listados/compras');
+});
+Route::get('/miMultimedia', function () {
+    return view('listados/contenido_multimedia');
+});
 
 //rutas generales
 Route::get('/contact',function () {

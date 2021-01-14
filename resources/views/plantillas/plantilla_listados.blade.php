@@ -16,7 +16,7 @@
         <div class="col-3"></div>
         <div class="col-6 withBackground">
             <div class="row">
-                <div class="col-4">
+                <div class="col-3">
                     <select name="filter">
                         <option value="0">filtrar</option>
                         <option >Estado</option>
@@ -27,8 +27,19 @@
                 <div class="col-4">
                     <input type="text" name="TextSearcher">
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <input type="button" name="Search" value="search" class="">
+                </div>
+                <div class="col-3">
+                    <select name="infoEstado">
+                        <option value="0">Ver Estados</option>
+                        <option >0 - Falta Confirmar</option>
+                        <option >1 - Confirmado</option>
+                        <option >2 - En Progreso</option>
+                        <option >3 - Completado</option>
+                        <option >4 - Error</option>
+                        <option >9 - Test</option>
+                    </select>
                 </div>
             </div>
             <div class="row">

@@ -34,7 +34,7 @@
 @section('zonaExtra')
     <div class="row">
         <div class="col-4"></div>
-        <div class="col-4"><button class="standard" role="link" onclick="window.location='/trinitempus/public/nuevaCiudad'">Nueva Ciudad</button></div>
+        <div class="col-4"><a href="{{url("/nuevaCiudad")}}"><button class="standard">Nueva Ciudad</button></a></div>
         <div class="col-4"></div>
 
     </div>

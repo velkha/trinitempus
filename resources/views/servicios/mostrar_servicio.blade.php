@@ -1,3 +1,4 @@
+@if( Auth::check())
 @extends('plantillas.plantilla_perfiles')
 
 @section('imagenPrincipal')
@@ -5,7 +6,7 @@
 @endsection
 @section('campo_datos_1', $data->nombre)
 
-@section('campo_datos_2',  \App\Http\Controllers\DatosServiciosController::getDurationInString($data->duracion));
+@section('campo_datos_2',  \App\Http\Controllers\DatosServiciosController::getDurationInString($data->duracion))
 
 @section('campo_datos_3', $data->precio_decimal.' tempus')
 
@@ -86,3 +87,9 @@
         </div>
     </div>
 @endsection
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

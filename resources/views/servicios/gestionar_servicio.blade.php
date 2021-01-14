@@ -1,3 +1,4 @@
+@if( Auth::check())
 @extends('plantillas.plantilla_formularios')
 
 @section('titulo')
@@ -33,3 +34,9 @@
 @section('modificacion_4', 'patatass')
 
 @section('modificacion_5', 'descripcion')
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

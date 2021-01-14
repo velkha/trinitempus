@@ -1,3 +1,4 @@
+@if( Auth::check())
 @extends('servicios.mostrar_contenido_multimedia_servicio')
 
 @section('comentarios')
@@ -43,3 +44,9 @@
         </div>
     </div>
 @endsection
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

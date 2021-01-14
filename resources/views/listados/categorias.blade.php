@@ -60,7 +60,7 @@
     <div class="row">
         <div class="col-4"></div>
 
-        <div class="col-4"><button class="standard" role="link" onclick="window.location='/trinitempus/public/nuevaCategoria'">Nueva Categoria</button></div>
+        <div class="col-4"><a href="{{url("/nuevaCategoria")}}"><button class="standard">Nueva Categoria</button></a></div>
         <div class="col-4"></div>
 
     </div>

@@ -1,3 +1,4 @@
+@if( Auth::check())
 @extends('plantillas.plantilla_perfiles')
 @section('imagenPrincipal')
     {{asset('assets/local/foca.jpg')}}
@@ -25,3 +26,9 @@
         </div>
     </div>
 @endsection
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

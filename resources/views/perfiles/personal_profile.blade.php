@@ -1,3 +1,4 @@
+@if( Auth::check())
 @extends('plantillas.plantilla_perfiles')
 @section('TextoModif','Mi Perfil')
 @section('imagenPrincipal')
@@ -25,7 +26,7 @@
             <a href="{{url("/pedidos")}}" class="standard">Mis Pedidos</a>
         </div>
         <div class="col-4 ">
-            <a href="{{url("/servicio/".Auth::user()->id)}}" class="standard">Mis Servicios</a>
+            <a href="{{url("/misServicios")}}" class="standard">Mis Servicios</a>
         </div>
     </div>
     <div class="row">
@@ -33,7 +34,7 @@
 
         </div>
         <div class="col-6 ">
-            <span ><a href="#" class="standard">Ver contenido multimedia</a></span>
+            <span ><a href="{{url("/miMultimedia")}}" class="standard">Ver contenido multimedia</a></span>
         </div>
     </div>
     <div class="row" >
@@ -56,3 +57,9 @@
         </div>
     </div>
 @endsection
+@else
+    <?php
+    header("Location:./");
+    exit;
+    ?>
+@endif

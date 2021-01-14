@@ -44,7 +44,7 @@ class Servicio extends Model
     }
 
     public function getCiudad(){
-        return $this->belongsTo(Categoria::class, 'id_ciudad');
+        return $this->belongsTo(Ciudad::class, 'id_ciudad');
     }
 
     public function getSubCategoria(){

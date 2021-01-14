@@ -79,6 +79,10 @@ class User extends Authenticatable
     public function getCompras(){
         return $this->hasMany(Pedido::class, 'uid_cliente');
     }
+    public function getContenido_multimedia(){
+        return $this->hasMany(Contenido_multimedia::class, 'uid_owner');
+    }
+
     /**
      * Retorna true si el usuario correspondiente a la id es admin, false si no
      *

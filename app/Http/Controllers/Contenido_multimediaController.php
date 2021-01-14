@@ -13,7 +13,7 @@ class Contenido_multimediaController extends Controller
         }
         else{
             try{
-                $contenido = Contenido_multimedia::find($id)->get();
+                $contenido = Contenido_multimedia::find($id);
                 if(file_exists(asset("assets/users/".$contenido->uid_owner."/".$contenido->contenido))){
                     return asset("assets/users/".$contenido->uid_owner."/".$contenido->contenido);
                 }
@@ -31,5 +31,11 @@ class Contenido_multimediaController extends Controller
         $multimedia=Contenido_multimedia::find($id);
         $multimedia->delete();
 
+    }
+
+    public static function getContenidoFromUser($id){
+        $multimedia= \App\Models\User::find(4)->getContenido_multimedia;
+
+        return $multimedia;
     }
 }
