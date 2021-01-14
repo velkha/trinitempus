@@ -34,7 +34,7 @@ class Contenido_multimediaController extends Controller
     }
 
     public static function getContenidoFromUser($id){
-        $multimedia= \App\Models\User::find(4)->getContenido_multimedia;
+        $multimedia= \App\Models\User::find($id)->getContenido_multimedia;
 
         return $multimedia;
     }
