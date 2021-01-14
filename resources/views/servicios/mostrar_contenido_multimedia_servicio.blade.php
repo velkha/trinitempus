@@ -21,12 +21,11 @@
         <div class="col-6 gallery">
             @foreach(\App\Http\Controllers\ServiceController::getContenidoMultimedia($dataServicio->id) as $contenido)
 
-                <form action="{{url("contenido_servicio/".$dataServicio->id."/".$contenido)}}" method="get">
+                <a href="{{url("contenido_servicio/".$dataServicio->id."/".$contenido)}}">
                     <figure class="gallery__item">
-                        <input type="image" src="{{\App\Http\Controllers\Contenido_multimediaController::getContenido($contenido)}}"
-                               alt="Imagen del contenido"/>
+                        <img src="{{\App\Http\Controllers\Contenido_multimediaController::getContenido($contenido)}}" alt="Imagen del contenido">
                     </figure>
-                </form>
+                </a>
             @endforeach
         </div>
     </div>
